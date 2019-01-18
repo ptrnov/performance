@@ -1,0 +1,62 @@
+<ion-content padding class="content-body">
+  <ion-item class="col-item-picture" [hidden]=atr_pic_ktp>
+      <img id="id-ktp-thum" class="label" src="assets/imgs/pic.png" (click)="viewFull($event)">
+  </ion-item>
+  <button class="tombol">
+      <ion-row id="id-ktp" (click)="ambilPhoto($event)">
+      <!-- <ion-icon btn-default name="search" class="icon">  | </ion-icon> -->
+        <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+        <ion-label class="garis-vertical">|</ion-label>
+        <ion-label class="btn-lbl">KTP</ion-label>
+      </ion-row>
+  </button>
+
+  <ion-item class="col-item-picture"  [hidden]=atr_pic_selfiktp>
+      <img id="id-selfiktp-thum" class="label" src="assets/imgs/pic.png" (click)="ambilPhoto($event)">
+  </ion-item>
+  <button class="tombol" >
+      <ion-row id="id-selfiktp" (click)="ambilPhoto($event)">
+        <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+        <ion-label class="garis-vertical">|</ion-label>
+        <ion-label class="btn-lbl">Selfie with KTP</ion-label>
+      </ion-row>
+  </button>
+
+  <ion-item class="col-item-picture" [hidden]=atr_pic_npwp>
+      <img id="id-npwp-thum" class="label" src="assets/imgs/pic.png" (click)="ambilPhoto($event)">
+  </ion-item>
+  <button  class="tombol">
+      <ion-row id="id-npwp" (click)="ambilPhoto($event)">
+        <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+        <ion-label class="garis-vertical">|</ion-label>
+        <ion-label class="btn-lbl">NPWP</ion-label>
+      </ion-row>
+  </button>
+
+  <ion-item class="col-item-picture" [hidden]=atr_pic_selfinpwp>
+      <img id="id-selfinpwp-thum" class="label" src="assets/imgs/pic.png">
+  </ion-item>
+  <button class="tombol" >
+      <ion-row id="id-selfinpwp" (click)="ambilPhoto($event)">
+        <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+        <ion-label class="garis-vertical">|</ion-label>
+        <ion-label class="btn-lbl">Slip Gaji</ion-label>
+      </ion-row>
+  </button>
+
+  <ion-item class="col-item-picture" [hidden]=atr_pic_selfiagent>
+      <img id="id-selfiagent-thum" class="label" src="assets/imgs/pic.png">
+  </ion-item>
+  <button class="tombol" >
+      <ion-row id="id-selfiagent" (click)="ambilPhoto($event)">
+        <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+        <ion-label class="garis-vertical">|</ion-label>
+        <ion-label class="btn-lbl">Selfie with Agent</ion-label>
+      </ion-row>
+  </button>
+  <ion-row justify-content-right>
+      <ion-col col-12 class="posisi-tombol">
+        <button ion-button  (click)="evidance()" class="back"></button>
+      </ion-col>
+  </ion-row>
+</ion-content>

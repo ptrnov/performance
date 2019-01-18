@@ -1,0 +1,93 @@
+page-prdinfo-crossellntp {
+  .content-body{
+    background-color: white;
+  }
+
+  .label_1{
+    margin-top: 54px;
+    text-align: left;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #8D9091;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  .grid-column{
+    width: 100%!important;
+    padding: 0 0 0 0;
+    color: #8D9091;
+    .row-menu1{
+      padding: 0 0 0 0;
+      margin-bottom: -15px;
+    }
+    .row-menu2{
+      padding: 0 0 0 0;
+    }
+    .label_1{
+      text-align: left;
+      margin-left: 15px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .label_2{
+      margin-top: -10px;
+      text-align: left;
+      margin-left: 15px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  .isi-subject{
+    padding:5px 5px 5px 5px;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 400;
+    color: #8D9091;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .isi{
+    padding:5px 5px 5px 5px;
+    text-align: justify;
+    font-size: 12px;
+    font-weight: 400;
+    color: #8D9091;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .posisi-tombol{
+    width: 100%;
+    height: auto;
+    bottom: 15px;
+    text-align: right;
+    right: 10px;
+    position: fixed;
+    .back{
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/back.png);
+      background-repeat: no-repeat;
+      background-size: 56px;
+      background-position: center;
+      background-color: transparent;
+      padding: 10px 5px 8px 77px;
+      height: 26px;
+    }
+    .back:hover
+    {
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/back.png);
+      background-repeat: no-repeat;
+      background-size: 56px;
+      background-position: center;
+      background-color: transparent;
+      padding: 10px 5px 8px 77px;
+      height: 26px;
+      background-color:rgb(241, 238, 31) !important;
+    }
+  }
+}

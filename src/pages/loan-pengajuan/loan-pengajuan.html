@@ -1,0 +1,162 @@
+
+<ion-content padding class="content-body">
+  <ion-grid class="grid-column">
+      <ion-row justify-content-left >
+           Dokumen yang akan dilampirkan
+      </ion-row>
+      <ion-row justify-content-left >
+          <ion-col col-12 style="padding:0 0 0 0">
+            <ion-list radio-group [(ngModel)]="serialData.data_pengajuan.dokumen_lampiran" class="radio-btn">
+                <ion-grid>
+                    <ion-row>
+                    <ion-col class="radio-custom" col-5 style="padding:0 0 0 0">
+                      <ion-item>
+                          <ion-label>KTP</ion-label>
+                          <ion-radio item-left value="KTP" checked></ion-radio>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label>Slip Gaji/SKP</ion-label>
+                          <ion-radio item-left value="Slip Gaji/SKP"></ion-radio>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label>NPWP</ion-label>
+                          <ion-radio item-left value="NPWP" [disabled]="isDisabled"></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col  class="radio-custom" col-7 style="padding:0 0 0 0">
+                      <ion-item>
+                          <ion-label>Kartu Kredit</ion-label>
+                          <ion-radio item-left value="Kartu Kredit" [disabled]="isDisabled"></ion-radio>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label>SPT</ion-label>
+                          <ion-radio item-left value="SPT" [disabled]="isDisabled"></ion-radio>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label>Reg.Koran/Tab.3 bulan terakhir</ion-label>
+                          <ion-radio item-left value="Reg.Koran/Tab.3 bulan terakhir" [disabled]="isDisabled"></ion-radio>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-list>
+            </ion-col>
+      </ion-row>
+      <ion-row justify-content-left >
+          Apakah Anda Nasabah Bank OCBC NISP
+     </ion-row>
+      <ion-row justify-content-left>
+          <ion-list radio-group class="radio-custom" [(ngModel)]="serialData.data_pengajuan.nasabah_bank.status">
+              <ion-item>
+                  <ion-label>Ya</ion-label>
+                  <ion-radio item-left value="ya" (ionSelect)="radio_select('ya')" checked="true"></ion-radio>
+              </ion-item>
+              <ion-item [hidden]=ya style="margin-left: 50px;">
+                  <ion-input id="noreg" type="text" [value]=noreg placeholder="Nomor rekening" [(ngModel)]="serialData.data_pengajuan.nasabah_bank.nomor_tekening" ></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Tidak</ion-label>
+                  <ion-radio item-left value="Tidak" (ionSelect)="radio_select('tidak')"></ion-radio>
+              </ion-item>
+          </ion-list>
+      </ion-row>
+      <ion-row justify-content-left style="margin-top:-30px">
+          <ion-item>
+              <ion-label floating >
+                <!-- <ion-icon name="ios-person" item-start ></ion-icon> -->
+                Jumlah pinjaman yang diajukan
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="serialData.data_pengajuan.jumlah_pinjaman"></ion-input>
+              <!-- <ion-input type="text" [(ngModel)]="userData.username"></ion-input> -->
+              <!-- <ion-input type="email"></ion-input> -->
+          </ion-item>
+          <ion-item>
+              <ion-label floating >
+                Bunga flat/bulan
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="serialData.data_pengajuan.bunga"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating >
+                Tanggal penggajian (untuk karyawan)
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="serialData.data_pengajuan.tgl_penggajian"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row justify-content-left >
+            <ion-col col-12 style="padding:0 0 0 0">
+              <ion-list radio-group [(ngModel)]="serialData.data_pengajuan.peruntukan" class="radio-btn">
+                  <ion-grid>
+                      <ion-row>
+                      <ion-col class="radio-custom" col-6 style="padding:0 0 0 0">
+                        <ion-item>
+                            <ion-label>Pendidikan</ion-label>
+                            <ion-radio item-left value="Pendidikan" checked></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Renovasi Rumah</ion-label>
+                            <ion-radio item-left value="Renovasi Rumah"></ion-radio>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col col-6 class="radio-custom"  style="padding:0 0 0 0">
+                        <ion-item>
+                            <ion-label>Liburan</ion-label>
+                            <ion-radio item-left value="Liburan" [disabled]="isDisabled"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>lain-lain</ion-label>
+                            <ion-radio item-left value="lain-lain" [disabled]="isDisabled"></ion-radio>
+                        </ion-item>
+                      </ion-col>
+                      <ion-col col-12 class="radio-custom" style="padding:0 0 0 0">
+                        <ion-item>
+                            <ion-label>Pembelian barang elektronik</ion-label>
+                            <ion-radio item-left value="Pembelian barang elektronik" [disabled]="isDisabled"></ion-radio>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-list>
+              </ion-col>
+        </ion-row>
+        <ion-row justify-content-left style="margin-top:10px">
+          <ion-label class="text-context">
+            Dana pencarian pinjaman ON Cash Loan agar dicairkan atau ditransfer ke rekening saya, dengan informasi sebagai berikut:
+          </ion-label>
+        </ion-row>
+        <ion-row justify-content-left style="margin-bottom: 30px">
+          <ion-item>
+              <ion-label floating >
+                Bank
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="serialData.data_pengajuan.nama_bank"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating >
+                Nomor rekening
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="serialData.data_pengajuan.nomor_rekening"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating >
+                Atas Nama
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="serialData.data_pengajuan.atas_nama"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating >
+                Cabang
+              </ion-label>
+              <ion-input type="text"  [(ngModel)]="serialData.data_pengajuan.cabang"></ion-input>
+          </ion-item>
+     </ion-row>
+     <ion-row justify-content-right>
+        <ion-col col-6 class="posisi-tombol1">
+            <button ion-button  (click)="kembali()" class="back"></button>
+        </ion-col>
+        <ion-col col-6 class="posisi-tombol">
+            <button ion-button  (click)="btnNext()" class="back"></button>
+          </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

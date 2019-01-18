@@ -1,0 +1,51 @@
+<ion-content padding class="content-body">
+    <div class="logo-input"></div>
+    <ion-grid class="grid-column">
+      <ion-row justify-content-center >
+          <ion-label class="label_1">
+            Sales Summary
+          </ion-label>
+      </ion-row>
+      <ion-row justify-content-center class="row-card2">
+         <ion-col col-6>
+             <ion-card class="card2">
+               <ion-card-header class="card2-header">
+                 Approve rate
+               </ion-card-header>
+               <ion-card-content class="card2-content">
+                80%
+               </ion-card-content>
+             </ion-card>
+         </ion-col>
+         <ion-col col-6>
+             <ion-card class="card3">
+               <ion-card-header class="card3-header">
+                 Run rate
+               </ion-card-header>
+               <ion-card-content class="card3-content">
+                50%
+               </ion-card-content>
+             </ion-card>
+         </ion-col>
+      </ion-row>
+      <ion-row justify-content-left>
+          <ion-col col-4>
+              <h6 style="margin-top: 0.5rem">In Process </h6>
+              <h6 style="margin-top: 0.5rem">Disbursed</h6>
+              <h6 style="margin-top: 0.5rem">Reject </h6>
+              <h6 style="margin-top: 0.5rem">Cancle  </h6>
+          </ion-col>
+          <ion-col col-8>
+              <h6 style="margin-top: 0.5rem">: 10 Applications</h6>
+              <h6 style="margin-top: 0.5rem">: 7 App (IDR7.000.000)</h6>
+              <h6 style="margin-top: 0.5rem">: 2 Applications</h6>
+              <h6 style="margin-top: 0.5rem">: 3 Applications </h6>
+          </ion-col>
+      </ion-row>
+      <ion-row justify-content-right>
+          <ion-col col-12 class="posisi-tombol">
+            <button ion-button  (click)="kembali()" class="back"></button>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

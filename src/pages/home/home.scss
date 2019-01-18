@@ -1,0 +1,336 @@
+page-home {
+
+  .content {
+    // background-color: #000000;
+    background-image: url('../assets/imgs/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  // .title-home{
+  //   font-size: 3.5vw;
+  //   font-family:"Arial Black";
+  //   color:white;
+  // }
+
+  // .logo{
+  //   background-image: url(../assets/imgs/OCBC_NISP_logo_putih.png);
+  //     background-repeat: no-repeat;
+  //     background-position: right;
+  //     background-size: 150px;
+  //     height:60px;
+  //     width: 100%;
+  //     margin-bottom: -35px;
+  //     margin-left: -20px;
+  //     text-align: right;
+  // }
+
+
+
+  .header-page{
+    height:53vw;
+    margin-top: 0px;
+    position:relative;  //ptr.nov relateve untuk user avatar
+    // background-image: url('../assets/imgs/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .user{
+      margin-top: 0px;
+      position: absolute; //terhadap header-page
+      width:100%!important;
+      // left: 40%;
+      text-align: center;
+      top: 75%;
+      .label{
+        color: #e2e2e2;
+        font-size: 18px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+    }
+  }
+  .content-body{
+    padding: 0 0 0 0;
+    width: 100%!important;
+    // background-color: white;
+    background-color: #1C1F26;
+  }
+  .user-avatar {
+    width: 120px;
+    height: 125px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid rgb(250, 250, 250);
+    text-align: center;
+    position: absolute; //terhadap header-page
+    left: 47%;
+    top: 60%;
+    margin-top: -70px;
+    margin-left: -50px;
+    // box-shadow: inset 0 0 10rem rgba(0,0,0,.25), 0 0 4rem rgba(255,255,255,.45);
+    img {
+      border-radius: 50%;
+    }
+  }
+
+
+
+
+  .grid-column{
+    width: 100%!important;
+    padding: 0 0 0 0;
+    margin-top: -16px;
+    .row-menu1{
+      padding: 0 0 0 0;
+      margin-bottom: -15px;
+    }
+    .row-menu2{
+      padding: 0 0 0 0;
+    }
+    .label_1{
+      text-align: left;
+      margin-top: 0px;
+      margin-left: 15px;
+      font-size: 1wv;
+      font-weight: 400;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .label_2{
+      margin-top: -10px;
+      text-align: left;
+      margin-left: 15px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+
+  .cardmenu-header{
+    margin-top: -5px;
+    background-color: white;
+    border-radius: 7px 7px 7px 7px;
+    border : 1px solid #ffffff;
+    box-shadow: 1px 0px 0px 1px rgb(92, 73, 73);
+    .card-header{
+      padding: 0 0 0 0;
+      .label1{
+        text-align: left;
+        margin-left: 29px;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .label2{
+        padding: 21px 0 0px 0;
+        text-align: right;
+        margin-right: 20px;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      height: 50px;
+    }
+    .card-content{
+      height: 30px;
+      border-top-color: 1px solid #1C1F26;
+      border : 1px solid #ffffff;
+    }
+  }
+
+  .card-menu1{
+    margin-top: -2px;
+    padding: 0 0 0 0;
+    background-color:#8D9091;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 1px 0px 0px 1px rgb(73, 67, 67);
+    border : 1px solid #ffffff;
+    width: 90%;
+    height:25vw;
+    margin-left: 3px;
+    .card-header{
+      width:100%!important;
+      padding: 0 0 0 0;
+      position: relative;
+      // display: block;
+      height: 17vw;
+      .image{
+        padding: 13px 43px 8px 25px;
+        margin-left: 5px;
+      }
+    }
+    .card-content{
+      width:100%!important;
+      padding: 0 0 0 0;
+      // position: relative;
+      .label{
+        margin-top: -11px;
+        margin-left: 5px;
+        text-align: center;
+        color: white;
+        font-size: 3.4vw;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+
+  .card-menu2{
+      margin-top: -2px;
+      padding: 0 0 0 0;
+      background-color:#8D9091;
+      border-radius: 7px 7px 7px 7px;
+      box-shadow: 1px 0px 0px 1px rgb(73, 67, 67);
+      border : 1px solid #ffffff;
+      width: 90%;
+      height: 25vw;
+      margin-left: 3px;
+      .card-header{
+        width:100%!important;
+        padding: 0 0 0 0;
+        position: relative;
+        display: block;
+        height: 17vw;
+        .image{
+          padding: 17px 33px 3px 25px;
+          margin-left: 5px;
+        }
+      }
+      .card-content{
+        width:100%!important;
+        padding: 0 0 0 0;
+        // position: relative;
+        .label{
+          margin-top: -11px;
+          margin-left: 5px;
+          text-align: center;
+          color: white;
+          font-size: 3.4vw;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+  }
+
+  .card-menu3{
+    margin-top: -2px;
+    padding: 0 0 0 0;
+    background-color:#8D9091;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 1px 0px 0px 1px rgb(73, 67, 67);
+    border : 1px solid #ffffff;
+    width: 90%;
+    height:25vw;
+    margin-left: 2px;
+    .card-header{
+        // width:100%!important;
+        // padding: 0 0 0 0;
+        // position: relative;
+        // display: block;
+        height: 17vw;
+      .image{
+        padding: 1px 26px 4px 10px;
+        margin-left: 5px;
+      }
+    }
+    .card-content{
+      width:100%!important;
+      height: 7vw;
+      padding: 0 0 0 0;
+      // position: relative;
+      .label{
+        margin-top: -5px;
+        margin-left: 5px;
+        text-align: center;
+        color: white;
+        font-size: 3.4vw;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+
+  .card-menu4{
+    margin-top: -2px;
+    padding: 0 0 0 0;
+    background-color:#8D9091;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 1px 0px 0px 1px rgb(73, 67, 67);
+    border : 1px solid #ffffff;
+    width: 90%;
+    height:25vw;
+    margin-left: 2px;
+    .card-header{
+        // width:100%!important;
+        // padding: 0 0 0 0;
+        // position: relative;
+        // display: block;
+        height: 17vw;
+      .image{
+        padding: 1px 26px 4px 10px;
+        margin-left: 5px;
+      }
+    }
+    .card-content{
+      width:100%!important;
+      height: 7vw;
+      padding: 0 0 0 0;
+      // position: relative;
+      .label{
+        margin-top: -5px;
+        margin-left: 5px;
+        text-align: center;
+        color: white;
+        font-size: 3.4vw;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+
+  .row-header{
+    margin-top:1  0px;
+    margin-left:10px;
+    margin-bottom: -22px;
+    .col-header1{
+      padding: 0 0 0 0;
+      margin-left: 0px;
+      .logo {
+        max-width: 100%;
+        margin-left: -1px;
+        height: auto;
+        margin-top: 10px;
+        display: block;
+      }
+    }
+  }
+
+  .posisi-tombol{
+    width: 100%;
+    height: auto;
+    bottom: 3px;
+    text-align: right;
+    right: 10px;
+    .back{
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/logout.png);
+      background-repeat: no-repeat;
+      background-size: 27px;
+      background-position: center;
+      background-color: transparent;
+      /* padding: 10px 5px 8px 77px; */
+      height: 26px;
+      margin-left: 20px;
+      margin-top: -50px;
+    }
+    .back:hover
+    {
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/logout.png);
+      background-repeat: no-repeat;
+      background-size: 27px;
+      background-position: center;
+      background-color: transparent;
+      /* padding: 10px 5px 8px 77px; */
+      height: 26px;
+      margin-left: 20px;
+      background-color:rgb(248, 135, 120) !important;
+    }
+  }
+}
+

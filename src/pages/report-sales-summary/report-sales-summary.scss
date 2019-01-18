@@ -1,0 +1,100 @@
+page-report-sales-summary {
+  .content-body{
+    background-color: white;
+  }
+
+  .label_1{
+    margin-top: 54px;
+    text-align: left;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    color: red;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  .posisi-tombol{
+    width: 100%;
+    height: auto;
+    bottom: 3px;
+    text-align: left;
+    right: 10px;
+    .back{
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/back.png);
+      background-repeat: no-repeat;
+      background-size: 56px;
+      background-position: center;
+      background-color: transparent;
+      padding: 10px 5px 8px 77px;
+      height: 26px;
+    }
+    .back:hover
+    {
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/back.png);
+      background-repeat: no-repeat;
+      background-size: 56px;
+      background-position: center;
+      background-color: transparent;
+      padding: 10px 5px 8px 77px;
+      height: 26px;
+      background-color:rgb(241, 238, 31) !important;
+    }
+  }
+  .row-card2{
+    padding: 0px 0px 0px 0px;
+    margin-left: -15px;
+    margin-right: -21px;
+    .card2{
+      margin-left: -2px;
+      padding: 0px 0px 0px 0px;
+      background: #8D9091;
+      border-radius: 15px;
+      height: 150px;
+      width: 100%;
+      .card2-header{
+        text-align: left;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(246, 249, 250);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .card2-content{
+        margin-top: -10px;
+        text-align: left;
+        font-size: 45px;
+        font-weight: 400;
+        color: rgb(246, 249, 250);;
+        font-family: Arial, Helvetica, sans-serif;
+        white-space: inherit;
+      }
+    }
+    .card3{
+      padding: 0px 0px 0px 0px;
+      background: #8D9091;
+      border-radius: 15px;
+      height: 150px;
+      width: 100%;
+      margin-left: -5px;
+      .card3-header{
+        text-align: left;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(246, 249, 250);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .card3-content{
+        margin-top: -10px;
+        text-align: left;
+        font-size: 45px;
+        font-weight: 400;
+        color: rgb(246, 249, 250);;
+        font-family: Arial, Helvetica, sans-serif;
+        white-space: inherit;
+      }
+    }
+  }
+}

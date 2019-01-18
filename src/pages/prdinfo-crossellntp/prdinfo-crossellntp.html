@@ -1,0 +1,76 @@
+<ion-header>
+
+  </ion-header>
+
+  <ion-content padding class="content-body">
+      <div class="logo-input"></div>
+      <ion-row justify-content-left >
+          <ion-label class="label_1">
+            Product Information
+          </ion-label>
+      </ion-row>
+      <ion-grid class="grid-column">
+          <ion-row justify-content-left class="isi-subject">
+              <ion-col col-10>
+                  <b>NTP (new to product)</b>
+              </ion-col>
+              <ion-col col-2>
+                <button (click)="ntpCal()" class="kalkulator"></button>
+              </ion-col>
+              <hr>
+          </ion-row>
+          <ion-row justify-content-left >
+            <ion-col col-12 class="isi">
+
+                persyaratan
+                - nasabah existing OCBC NISP
+                - Memiliki kartu kredit di bank lain
+                  dengan MOB 12 bulan dan minimum limit IDR 10 Juta
+
+                Dokumentasi
+                - form aplikasi
+                - Photo KTP
+                - Photo NPWP
+                - Photo Kartu Kredit
+                - Arsiran no Kartu kredit
+                - Income document
+                  Karyawan   : slip gaji terakhir/SPT
+                        Surat Keterangan penghasilan
+                        (bila ada, lampirkan)
+                  Wiraswasta : rekening koran 3 bulan terakhris
+                        (bila ada, lampirkan)
+
+                Limit pinjaman
+                IDR 5 juta - 100 juta
+
+                Tenor
+                12,24,36 dan 48 bulan
+
+                Bunga
+                IDR 50 Juta (2.00%, 1.75% dan 1.75%)
+                IDR 50 Juta (1.59%, 1.59% dan 1.59%)
+
+                Billing statement
+                Email : free
+                Hardcopy : IDR 10,000 per billing
+
+                Denda Keterlambatan
+                5% dari jumlah tagihan (min. IDR 150.000)
+
+                Denda Pelunasan Dipercepat
+                8% dari sisa pokok pinjaman (min IDR 150.000)
+
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row justify-content-right>
+            <ion-col col-12 class="posisi-tombol">
+              <button ion-button  (click)="kembali()" class="back">
+                  <!-- <ion-icon name="ios-send-outline"></ion-icon> -->
+
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-content>

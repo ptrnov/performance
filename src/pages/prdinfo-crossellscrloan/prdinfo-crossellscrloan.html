@@ -1,0 +1,43 @@
+<ion-header>
+
+  </ion-header>
+
+  <ion-content padding class="content-body">
+      <div class="logo-input"></div>
+      <ion-row justify-content-left >
+          <ion-label class="label_1">
+            Product Information
+          </ion-label>
+      </ion-row>
+      <ion-grid class="grid-column">
+          <ion-row justify-content-left class="isi-subject">
+              <ion-col col-10>
+                  <b>Secure Loan</b>
+              </ion-col>
+              <ion-col col-2>
+                <button (click)="loanCal()" class="kalkulator"></button>
+              </ion-col>
+              <hr>
+          </ion-row>
+          <ion-row justify-content-left >
+            <ion-col col-12 class="isi">
+                KPR OCBC NISP
+                Pra Syarat
+                - Warga Negara Indonesia
+                - Usia 21 - 58 untuk Karyawan dan
+                  Max 70 tahun untuk Pengusaha/ Professional
+                - Memiliki Penghasilan Tetap
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row justify-content-right>
+            <ion-col col-12 class="posisi-tombol">
+              <button ion-button  (click)="kembali()" class="back">
+                  <!-- <ion-icon name="ios-send-outline"></ion-icon> -->
+
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-content>

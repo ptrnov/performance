@@ -1,0 +1,26 @@
+<ion-content padding class="content-body">
+    <ion-grid class="grid-column">
+        <ion-list >
+            <ion-item class="data-item-list" *ngFor="let activity of timelinePic">
+              <ion-row>
+                <ion-col col-4 class="col1_list1">
+                    <h4 class="lbl1">{{activity.nama}}</h4>
+                    <h4 class="lbl2">{{activity.product}}</h4>
+                </ion-col>
+                <ion-col col-8 class="col1_list2">
+                      <h4 class="lbl1">{{activity.alamat}}</h4>
+                      <h4 class="lbl2"> {{activity.phone}}</h4>
+                      <h6 class="lbl3">{{activity.applied_stt}} : {{activity.applied_date}} </h6>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+        </ion-list>
+   </ion-grid>
+   <ion-grid class="grid-column">
+      <ion-row justify-content-right>
+          <ion-col col-12 class="posisi-tombol">
+            <button ion-button  (click)="kembali()" class="back"></button>
+          </ion-col>
+      </ion-row>
+   </ion-grid>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-content padding class="content-body">
+    <div class="logo-input"></div>
+  <ion-grid class="grid-column">
+    <ion-row justify-content-center >
+        <ion-label class="label_1">
+          Sales Summary vs Program
+        </ion-label>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="grid-column">
+      <ion-list >
+          <ion-list >
+              <ion-item class="data-item-list" *ngFor="let activity of timelinePic">
+                <ion-row>
+                  <ion-col col-3>
+                        <ion-avatar item-start>
+                            <img src={{activity.pic}} class="img">
+                        </ion-avatar>
+                    </ion-col>
+                  <ion-col col-6>
+                        <h2 class="lbl_nm">{{activity.nama}}</h2>
+                  </ion-col>
+                  <ion-col col-3>
+                    <!-- <button ion-button clear item-end (click)="btnview()">
+                      View
+                    </button> -->
+                    <button ion-button (click)="btnview()" class="tombol-detail"></button>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+          </ion-list>
+      </ion-list>
+   </ion-grid>
+   <ion-row justify-content-right>
+      <ion-col col-12 class="posisi-tombol">
+        <button ion-button  (click)="kembali()" class="back"></button>
+      </ion-col>
+  </ion-row>
+</ion-content>

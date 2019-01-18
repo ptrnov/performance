@@ -1,0 +1,7 @@
+{
+  "name": "KTA",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

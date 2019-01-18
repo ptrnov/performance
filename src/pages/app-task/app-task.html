@@ -1,0 +1,18 @@
+<ion-header>
+
+    <div class="logo-input"></div>
+    <ion-row justify-content-left >
+        <ion-label class="label_1">
+          My Task
+        </ion-label>
+    </ion-row>
+
+  </ion-header>
+
+<ion-content padding class="content-body">
+  <ion-tabs #tabTask tabsPlacement="top" tabsHighlight=true class="tabptr">
+    <ion-tab [root]="taskListRoot" tabTitle="Task List"></ion-tab>
+    <ion-tab [root]="taskDraftRoot" tabTitle="Task Draft"></ion-tab>
+    <ion-tab [root]="taskHistoryRoot" tabTitle="Task History"></ion-tab>
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-content padding class="content-body">
+  <ion-grid class="grid-column">
+    <ion-row justify-content-left >
+        <ion-label class="hdr-lbl">Perlindungan Asuransi Jiwa</ion-label>
+    </ion-row>
+    <ion-row justify-content-left >
+        <ion-label class="content-lbl">
+          Dengan menandatangani kolom tanda tangan
+          sebagaimana disamping, maka Saya menyatakan
+          bahwa hal-hal yang disebutkan dibawah ini adalah
+          benar:
+        <br><br>
+          1. Saya setuju untuk mengikuti asuransi jiwa pada
+            perusahaan: PT Asuransi Jiwa Sequis Life.
+        <br><br>
+          2. Saya telah memahami manfaat, risiko dan
+            biaya - biaya atas Asuransi jiwa ini, termasuk juga
+            syarat dan ketentuan serta batasan/pengecualian.
+        <br><br>
+          3. Saya menyatakan bahwa saya berumur dibawah
+            60 tahun dan dalam kondisi sehat, Saya tidak pernah diagnosa
+            dan/atau mendapatkan perawatan medis karena penyakit kanker
+            atau tumor, hati atau hepatitis, jantung, tekanan darah tinggi,
+            diabetes, stroke atau gangguan pada otak,
+            paru-paru, ginjal dan/atau HIV/AIDS
+            (pernyataan kesehatan/health declaration).
+        </ion-label>
+    </ion-row>
+    <ion-row justify-content-left>
+        <ion-item>
+            <ion-label>Saya telah membaca dan menyetujui semua pernyataan di atas.</ion-label>
+            <ion-checkbox (ionChange)="pilihChecked($event)" item-left value="setuju" ></ion-checkbox>
+        </ion-item>
+    </ion-row>
+    <ion-row justify-content-right class="button">
+        <ion-col col-12 class="posisi-tombol">
+          <button ion-button  [disabled]=stt_pernyataan (click)="pernyataan()" class="back"></button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

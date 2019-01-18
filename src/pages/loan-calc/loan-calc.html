@@ -1,0 +1,114 @@
+<ion-content padding class="content-body">
+    <div class="logo-input"></div>
+  <ion-grid class="grid-column">
+    <ion-row justify-content-center >
+        <ion-label class="label_1">
+          Kalkulator Simulasi
+        </ion-label>
+    </ion-row>
+    <ion-row justify-content-center >
+        <ion-label class="lbl_jenis">Jenis Simulasi</ion-label><br>
+    </ion-row>
+    <ion-row justify-content-center >
+        <ion-col col-12 style="padding:0 0 0 0">
+          <ion-list radio-group class="radio-custom">
+              <ion-grid>
+                  <ion-row>
+                    <ion-col class="radio-custom" col-6 style="padding:0 0 0 0">
+                      <ion-item no-lines>
+                          <ion-label>Jumlah Pinjaman</ion-label>
+                          <ion-radio item-left value="ya" checked="true"></ion-radio>
+                          <!-- <ion-radio item-left value="ya" (ionSelect)="radio_select('ya')" checked="true"></ion-radio> -->
+                      </ion-item>
+                    </ion-col>
+                    <ion-col class="radio-custom" col-6 style="padding:0 0 0 0">
+                      <ion-item no-lines>
+                          <ion-label>Angsuran Pinjaman</ion-label>
+                          <ion-radio item-left value="Tidak"></ion-radio>
+                          <!-- <ion-radio item-left value="Tidak" (ionSelect)="radio_select('tidak')"></ion-radio> -->
+                      </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center class="row-angsuran">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="radio-custom" col-6 style="padding:0 0 0 0">
+              <ion-label> Angsuran Bulanan</ion-label><br>
+            </ion-col>
+            <ion-col class="radio-custom" col-6 style="padding:0 0 0 0">
+              <ion-item no-lines>
+                <ion-input  type="text" placeholder="Jumlah"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-row>
+    <ion-row justify-content-center class="row-angsuran">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="radio-custom" col-6 style="padding:0 0 0 0">
+              <ion-label> Jangka Waktu Pengembalian</ion-label><br>
+            </ion-col>
+            <ion-col class="radio-custom" col-6 style="padding:0 0 0 0">
+              <ion-item no-lines>
+                <ion-input no-lines type="text" placeholder="Jumlah"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-row>
+    <ion-row justify-content-center class="box_hitung" >
+        <ion-buttons end>
+            <button ion-button icon-only class="btn_hitung">
+                Hitung
+            </button>
+        </ion-buttons>
+    </ion-row>
+    <ion-row justify-content-left >
+        <ion-label class="label_hasil">
+          Hasil Simulasi
+        </ion-label>
+    </ion-row>
+    <ion-row justify-content-left class="row-card2" >
+        <ion-card class="card3">
+            <ion-card-content class="card3-content">
+                <ion-row justify-content-left  class="position-label" >
+                    <ion-label class="label_3">
+                      Suku Bunga
+                    </ion-label>
+                    <ion-label class="label_4">
+                        : 9.50 % Fixed 1 Thn
+                    </ion-label>
+                </ion-row>
+                <ion-row justify-content-left  class="position-label" >
+                    <ion-label class="label_3">
+                      Down Payment
+                    </ion-label>
+                    <ion-label class="label_4">
+                        : Rp. 290.394.872
+                    </ion-label>
+                </ion-row>
+                <ion-row justify-content-left  class="position-label" >
+                    <ion-label class="label_3">
+                      Jumlah Pinjaman
+                    </ion-label>
+                    <ion-label class="label_4">
+                        : Rp. 435.592.309
+                    </ion-label>
+                </ion-row>
+            </ion-card-content>
+          </ion-card>
+    </ion-row>
+    <ion-row justify-content-left >
+        <ion-buttons end>
+            <button class="btn_close" ion-button icon-only (click)="closeModal()">
+                close
+            </button>
+        </ion-buttons>
+    </ion-row>
+  </ion-grid>
+</ion-content>

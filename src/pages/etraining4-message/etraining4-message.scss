@@ -1,0 +1,118 @@
+page-etraining4-message {
+  .content {
+    // background-color: #000000;
+    background-image: url('../assets/imgs/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sukses{
+    // border-radius: 30px 30px 30px 30px;
+    background-image: url(../assets/imgs/succesjoin.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center;
+    // padding: 0px 0px 0px 0px;
+    // background-color: transparent;
+    padding: 10px 5px 8px 77px;
+    height: 100px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10%;
+  }
+  .hdr-lbl1{
+    margin-top: 70px;
+    text-align: center;
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .hdr-lbl2{
+    text-align: center;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .hdr-lbl3{
+    text-align: center;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: inherit;
+  }
+  .hdr-lbl4{
+    text-align: center;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #8D9091;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .key-button{
+    margin-top: 30px;
+  }
+  .icon-back-hapus{
+     width: 37px;
+    text-align: center;
+    font-size:2.2rem;
+    font-weight: normal;
+  }
+  .tombol-jarak{
+    margin-left: 41px;
+  }
+
+  .box-auth{
+    padding: 0px 0px 10px 10px;
+    border-radius: 10%;
+    border: 2px solid #8D9091;
+    text-align: center;
+    margin: 2px;
+    width: 50px;
+    height: 20px;
+    .lbl{
+      padding: 0px 0px 0px 0px;
+      margin-top: 7px;
+      font-size: 20px;
+      font-weight: 900;
+      font-family: Arial;
+      text-align: center;
+    }
+
+  }
+
+  .posisi-tombol{
+    width: 100%;
+    height: auto;
+    bottom: 3px;
+    text-align: right;
+    right: 10px;
+    .back{
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/next.png);
+      background-repeat: no-repeat;
+      background-size: 56px;
+      background-position: center;
+      background-color: transparent;
+      padding: 10px 5px 8px 77px;
+      height: 26px;
+    }
+    .back:hover
+    {
+      border-radius: 30px 30px 30px 30px;
+      background-image: url(../assets/imgs/next.png);
+      background-repeat: no-repeat;
+      background-size: 56px;
+      background-position: center;
+      background-color: transparent;
+      padding: 10px 5px 8px 77px;
+      height: 26px;
+      background-color:rgb(241, 238, 31) !important;
+    }
+  }
+}

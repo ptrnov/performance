@@ -1,0 +1,123 @@
+<ion-content padding class="content-body">
+  <div class="logo"></div>
+  <ion-grid style="margin-top:40px">
+    <ion-row justify-content-center>
+        <ion-col col-12>
+          <ion-label class="label-header">
+            Sales Agent Registration
+          </ion-label>
+        </ion-col>
+    </ion-row>
+    <ion-row justify-content-center class="row-content">
+        <ion-col col-12 >
+          <!-- Login form -->
+          <form [formGroup]="todo" class="signup-form" (ngSubmit)="tambahUser(todo.value)">
+              <ion-list>
+                <!-- <ion-item-group> -->
+                  <ion-item no-lines>
+                    <ion-input formControlName="nama" type="text" placeholder="Nama" class="ion_input"></ion-input>
+                  </ion-item>
+                  <ion-item no-lines *ngIf="todo.get('nama').errors && todo.get('nama').dirty">
+                      <p color="primary" ion-text *ngIf="todo.get('nama').hasError('required')">Required</p>
+                  </ion-item>
+                <!-- </ion-item-group> -->
+
+                <ion-item no-lines>
+                  <ion-input formControlName="phone"  type="text" placeholder="Phone"></ion-input>
+                </ion-item>
+                <ion-item *ngIf="todo.get('phone').errors && todo.get('phone').dirty">
+                    <p color="primary" ion-text *ngIf="todo.get('phone').hasError('required')">Required</p>
+                </ion-item>
+
+                <ion-item no-lines>
+                  <ion-input formControlName="email"  type="email" placeholder="Email"></ion-input>
+                </ion-item>
+                <ion-item no-lines *ngIf="todo.get('email').errors && todo.get('email').dirty">
+                    <p color="primary" ion-text *ngIf="todo.get('email').hasError('required')">Required</p>
+                </ion-item>
+
+                <!-- <ion-item no-lines>
+                  <ion-input formControlName="username" type="text" placeholder="Username" class="ion_input"></ion-input>
+                </ion-item>
+                <ion-item no-lines *ngIf="todo.get('username').errors && todo.get('username').dirty">
+                    <p color="primary" ion-text *ngIf="todo.get('nama').hasError('required')">Required</p>
+                </ion-item> -->
+
+                <!-- <ion-item no-lines>
+                 <ion-input no-lines formControlName="password" type="password" placeholder="Password"></ion-input>
+                </ion-item>
+                <ion-item *ngIf="todo.get('password').errors && todo.get('password').dirty">
+                    <p color="primary" ion-text *ngIf="todo.get('password').hasError('required')">Required</p>
+                </ion-item> -->
+
+                <ion-item class="content-item">
+                    <ion-input type="hidden" formControlName="img_ktp" [(ngModel)]="pic_ktp"></ion-input>
+                    <ion-input type="hidden" formControlName="img_ktp_selfie" [(ngModel)]="pic_ktp_selfie"></ion-input>
+                    <ion-input type="hidden" formControlName="img_npwp" [(ngModel)]="pic_npwp"></ion-input>
+                    <ion-input type="hidden" formControlName="img_selfie" [(ngModel)]="pic_selfie"></ion-input>
+                </ion-item>
+
+
+              <ion-item class="col-item-picture" [hidden]=atr_pic_ktp>
+                  <img id="id-ktp-thum" class="label" src="assets/imgs/pic.png">
+                  <!-- <ion-input type="image" formControlName="img_ktp" [(ngModel)]="pic_ktp" src="view_ktp"></ion-input> -->
+              </ion-item>
+              <button class="tombol" type="button">
+                  <ion-row id="id-ktp" (click)="ambilPhoto($event)">
+                    <!-- <ion-icon btn-default name="search" class="icon">  | </ion-icon> -->
+                    <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+                    <ion-label class="garis-vertical">|</ion-label>
+                    <ion-label class="btn-lbl">KTP</ion-label>
+                  </ion-row>
+              </button>
+              <!-- <ion-item *ngIf="todo.get('picktp').errors && todo.get('picktp').dirty">
+                  <p color="primary" ion-text *ngIf="todo.get('picktp').hasError('required')">Required</p>
+              </ion-item> -->
+
+              <ion-item class="col-item-picture"  [hidden]=atr_pic_ktp_selfie>
+                  <img id="id-ktp-selfie-thum" class="label" src="assets/imgs/pic.png">
+                  <!-- <ion-input id="id-ktp-selfie-thum" type="image" formControlName="img_ktp_selfie" [(ngModel)]="pic_ktp_selfie" src="assets/imgs/pic.png"></ion-input> -->
+              </ion-item>
+              <button class="tombol" type="button">
+                  <ion-row id="id-ktp-selfie" (click)="ambilPhoto($event)">
+                    <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+                    <ion-label class="garis-vertical">|</ion-label>
+                    <ion-label class="btn-lbl">Selfie</ion-label>
+                  </ion-row>
+              </button>
+
+              <ion-item class="col-item-picture" [hidden]=atr_pic_npwp>
+                  <img id="id-npwp-thum" class="label" src="assets/imgs/pic.png">
+                  <!-- <ion-input id="id-npwp-thum" type="image" formControlName="img_npwp" [(ngModel)]="pic_npwp" src="assets/imgs/pic.png"></ion-input> -->
+              </ion-item>
+              <button  class="tombol" type="button">
+                  <ion-row id="id-npwp" (click)="ambilPhoto($event)">
+                    <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+                    <ion-label class="garis-vertical">|</ion-label>
+                    <ion-label class="btn-lbl">Diploma/Transcript</ion-label>
+                  </ion-row>
+              </button>
+
+              <ion-item class="col-item-picture" [hidden]=atr_pic_selfie>
+                  <img id="id-selfie-thum" class="label" src="assets/imgs/pic.png">
+                  <!-- <ion-input id="id-selfie-thum" type="image" formControlName="img_selfie" [(ngModel)]="pic_selfie" src="assets/imgs/pic.png"></ion-input> -->
+              </ion-item>
+              <button [hidden]=true class="tombol" type="button">
+                  <ion-row id="id-selfie" (click)="ambilPhoto($event)">
+                    <img src="assets/imgs/camera.png" alt="submit" class="icon" />
+                    <ion-label class="garis-vertical">|</ion-label>
+                    <ion-label class="btn-lbl">Profile Photo</ion-label>
+                  </ion-row>
+              </button>
+            </ion-list>
+            <ion-item margin-bottom>
+                <button ion-button color="primary" class="tombol-submit"
+                  text-center
+                  block
+                  [disabled]="!todo.valid">Submit</button>
+            </ion-item>
+          </form>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
