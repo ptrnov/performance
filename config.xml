@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="kta.ocbcnisp.com" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>KTA Digital</name>
-    <description>KTA</description>
+<widget id="performance.scm.co.id" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Performance</name>
+    <description>Performance  Monitoring</description>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="*" />

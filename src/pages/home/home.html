@@ -1,118 +1,31 @@
-<!-- <ion-header>
+<ion-header class="header">
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-label text-wrap class="title-toolbar">ONLINE APP. KORLANTAS</ion-label>
+    <div class="image"></div>
   </ion-navbar>
-</ion-header> -->
-
-<ion-content class="content-body">
-    <div class="logo"></div>
+  <!-- <div class="logo"></div>
     <div class="header-page">
         <div class="user-avatar">
             <img src="assets/imgs/avatar.jpg" width="120px"  height="120px"/>
         </div>
         <div class="user" *ngFor="let x1 of userProfile">
           <label class="label">Catrine  |  Agent Sales  | 22122018</label><br>
-          <!-- <label class="label">Polda Metrojaya - Polres Metro Jakarta Pusat</label> -->
+
         </div>
-    </div>
+    </div> -->
+</ion-header>
 
-     <ion-grid class="grid-column">
-          <ion-row justify-content-left >
-              <ion-label class="label_1">
-                Hello Catrine!
-              </ion-label>
-          </ion-row>
-          <ion-row justify-content-center >
-            <ion-label class="label_2">
-              Let's get your Target, reward waiting you!
-            </ion-label>
-          </ion-row>
 
-          <ion-row justify-content-center>
-            <ion-col col-12 style="padding:0 0 0 0">
-              <ion-card class="cardmenu-header" (click)="bukaSim()">
-                <ion-card-header class="card-header">
-                    <ion-row justify-content-center >
-                      <ion-label class="label1">
-                        Balance
-                      </ion-label>
-                      <ion-label class="label2">
-                        Rp 20.000,000,00
-                      </ion-label>
-                    </ion-row>
-                </ion-card-header>
-                <ion-card-content class="card-content">
-                    <hr>
-                </ion-card-content>
-              </ion-card>
-            </ion-col>
-        </ion-row>
-
-       <ion-row justify-content-center >
-            <ion-col col-4 style="padding:0 0 0 0">
-              <ion-card class="card-menu1" (click)="appform()">
-                <ion-card-header class="card-header">
-                    <img class="image" src="assets/imgs/kta_add_red.png">
-                </ion-card-header>
-                <ion-card-content class="card-content">
-                    <ion-label class="label">
-                        Application<br> Form
-                    </ion-label>
-                </ion-card-content>
-              </ion-card>
-            </ion-col>
-            <ion-col col-4 style="padding:0 0 0 0">
-                <ion-card class="card-menu2" (click)="appProduct()">
-                    <ion-card-header class="card-header">
-                        <img  class="image" src="assets/imgs/product.png">
-                    </ion-card-header>
-                    <ion-card-content class="card-content">
-                        <ion-label class="label">
-                            Product<br> Information
-                        </ion-label>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-       </ion-row>
-       <ion-row justify-content-center >
-            <ion-col col-4 style="padding:0 0 0 0">
-                <ion-card class="card-menu3" (click)="mytask()">
-                    <ion-card-header class="card-header">
-                        <img  class="image" src="assets/imgs/task_list.png">
-                    </ion-card-header>
-                    <ion-card-content class="card-content">
-                        <ion-label class="label">
-                            My Task
-                        </ion-label>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-            <ion-col col-4 style="padding:0 0 0 0">
-                <ion-card class="card-menu3" (click)="laporan()">
-                    <ion-card-header class="card-header">
-                        <img  class="image" src="assets/imgs/report.png">
-                    </ion-card-header>
-                    <ion-card-content class="card-content">
-                        <ion-label class="label">
-                            Report
-                        </ion-label>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-       </ion-row>
-      <ion-row>
-          <ion-col col-12 class="posisi-tombol">
-              <button ion-button  (click)="logoff()" class="back"></button>
-          </ion-col>
-      </ion-row>
-
-     </ion-grid>
-    <div style="height:50px">
-    <!-- <button ion-button (click)="testApiKendaraan()">testApi Kendaraan</button>
-    <button ion-button (click)="testApiSim()">testApi SIM</button> -->
-    </div>
-
+<ion-content padding class="content-body">
+  <ion-tabs #myTabs tabsPlacement="top" tabsHighlight=true clss="tab_menu" >
+    <!-- <ion-tab [root]="loanDatadiriRoot" tabTitle="Loan datadiri" tabIcon="information-circle"></ion-tab> -->
+      <ion-tab [root]="homeMenu1Root" ></ion-tab>
+      <ion-tab [root]="homeMenu2Root"  ></ion-tab>
+  </ion-tabs>
 </ion-content>
+
+
+
+

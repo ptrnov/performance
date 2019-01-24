@@ -60,7 +60,8 @@ import { TaskListPage } from '../pages/task-list/task-list';
 import { TaskHistoryPage } from '../pages/task-history/task-history';
 import { TaskDraftPage } from '../pages/task-draft/task-draft';
 import { LoanCalcPage } from '../pages/loan-calc/loan-calc';
-
+import { HomeMenu1Page } from '../pages/home-menu1/home-menu1';
+import { HomeMenu2Page } from '../pages/home-menu2/home-menu2';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,9 @@ import { LoanCalcPage } from '../pages/loan-calc/loan-calc';
     TaskListPage,
     TaskHistoryPage,
     TaskDraftPage,
-    LoanCalcPage
+    LoanCalcPage,
+    HomeMenu1Page,
+    HomeMenu2Page
   ],
   imports: [
     BrowserModule,
@@ -172,7 +175,9 @@ import { LoanCalcPage } from '../pages/loan-calc/loan-calc';
     TaskListPage,
     TaskHistoryPage,
     TaskDraftPage,
-    LoanCalcPage
+    LoanCalcPage,
+    HomeMenu1Page,
+    HomeMenu2Page
   ],
   providers: [
     StatusBar,

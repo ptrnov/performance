@@ -1,117 +1,106 @@
 page-login{
-
+  .scroll-content {
+    padding-bottom: 0 !important;
+  }
     .content {
-        // background-color: #000000;
-        background-image: url('../assets/imgs/background.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .header-logo{
-        background-image: url('../assets/imgs/logoDigital.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 120px;
-        // height: 50px;
-        width: auto;
-        margin-bottom: -25px;
-    }
-    .header-logo{
-      background-image: url('../assets/imgs/LOGO_whi.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 170px;
-      height: 35vh;
-      width: auto;
-      margin-bottom: -35px;
-    }
-    .text-logo1{
-        margin-top: -10px;
-        // font-size: 15px;
-        font-size: 15px;
-        font-family:"Arial Black";
-        color:rgba(255, 255, 239, 0.911);
-    }
-    .text-logo2{
-      margin-top: -10px;
-      font-size: 15px;
-      font-family:"Arial Black";
-      color:rgba(255, 255, 239, 0.911);
-    }
-    // .text-input{
-    //   background-color:transparent!important;
-    //    color: #d1c55a;
-    // }
-    .tombolLogin {
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d40707), color-stop(1, #d40707));
-      background:-moz-linear-gradient(top, #d40707 5%, #d40707 100%);
-      background:-webkit-linear-gradient(top, #d40707 5%, #d40707 100%);
-      background:-o-linear-gradient(top, #d40707 5%, #d40707 100%);
-      background:-ms-linear-gradient(top, #d40707 5%, #d40707 100%);
-      background:linear-gradient(to bottom, #d40707 5%, #d40707 100%);
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d40707', endColorstr='#e4dc4a',GradientType=0);
-      background-color:#d40707;
-      // -moz-border-radius:42px;
-      // -webkit-border-radius:42px;
-      border:1px solid #d40707;
-      display:inline-block;
-      cursor:pointer;
-      color:rgb(250, 250, 250);
-      font-family:Verdana;
-      font-size:15px;
-      font-weight:bold;
-      padding:15px 50px;
-      text-decoration:none;
-      text-shadow:0px 0px 33px #d40707;
-    }
-    .myButton:hover {
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e4dc4a), color-stop(1, #d1c55a));
-      background:-moz-linear-gradient(top, #e4dc4a 5%, #d1c55a 100%);
-      background:-webkit-linear-gradient(top, #e4dc4a 5%, #d1c55a 100%);
-      background:-o-linear-gradient(top, #e4dc4a 5%, #d1c55a 100%);
-      background:-ms-linear-gradient(top, #e4dc4a 5%, #d1c55a 100%);
-      background:linear-gradient(to bottom, #e4dc4a 5%, #d1c55a 100%);
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4dc4a', endColorstr='#d1c55a',GradientType=0);
-      background-color:#e4dc4a;
-    }
-    .myButton:active {
-      position:relative;
-      top:1px;
+        // background-color: cornflowerblue;
+        // background:#0F466E;
+        // background:-webkit-linear-gradient(right,#0F466E 0%,#5093C4 75%);
+        // background:-moz-linear-gradient(right,#0F466E 0%,#5093C4 75%);
+        // background:-o-linear-gradient(right,#0F466E 0%,#5093C4 75%);
+        // background:-ms-linear-gradient(right,#0F466E 0%,#5093C4 75%);
+        // background-image: url('../assets/imgs/background.png');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        background: linear-gradient(to right, #0B437B, #3579AE);
+        /* Standard syntax */
+
+        // background: -webkit-linear-gradient(cornflowerblue, green);
+        // // /* For Safari 5.1 to 6.0 */
+
+        // background: -o-linear-gradient(cornflowerblue, green);
+        // /* For Opera 11.1 to 12.0 */
+
+        // background: -moz-linear-gradient(cornflowerblue, green);
     }
 
-    .fs13{
-      font-size: 13px;
+    .grid-column{
+      width: 100%!important;
+      padding: 0 0 0 0;
     }
-    .wrap-button{
-      position: fixed;
+    .card-login{
+      padding: 0px 0px 0px 0px;
+      border-radius: 7px 7px 7px 7px;
       width: 100%;
       height: auto;
-      bottom: 126px;
-    }
-
-    .bg-login{
-      background: #000000;
-      color:#f5f4f4;
-      font-family: 'Raleway', sans-serif;
-      text-transform: capitalize;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      border-radius: 30px 30px 30px 30px;
-      // box-shadow: 0px 0px 0px 1px #000;
+      bottom: calc(-100% + 60%);
+      position: relative;
+      margin: 0px;
+      background: rgba(189, 200, 219, 0.1)!important;
+      .card-header-md + .card-content-md, .card-md .item + .card-content-md {
+        padding-top: 0;
+        background: rgba(189, 200, 219, 0.1)!important;
+      }
+      .header{
+        background-image: url('../assets/imgs/login_performance.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 200px;
+        // background: rgb(190, 200, 219)!important;
+        height:60px;
+        width: 100%;
+        margin-top: 10px;
+        // margin-bottom: -35px;
+        // margin-left: -20px;
+        // text-align: right;
+      }
+      .content{
+        .box-text{
+          background-color: transparent;
+          // margin-top: -10px;
+          // font-size: 15px;
+          font-size: 15px;
+          font-family:"Arial Black";
+          color:black;
+          .ion_input{
+            border-radius: 10px 10px 10px 10px;
+            padding: 0px 0px 0px 0px;
+          }
+        }
+        .box-tombol{
+          background-color: transparent;
+          text-align: center;
+          .Login{
+            background: #fdfbfb;
+            /* color: black; */
+            font-family: 'Raleway', sans-serif;
+            text-transform: capitalize;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 29px;
+            padding: 10px 10px 10px 10px;
+            border-radius: 30px 30px 30px 30px;
+          }
+        }
+      }
     }
 
     .footer-created{
       width: 100%;
-      height: auto;
-      bottom: 15px;
-      position: fixed;
+      height: 100%;
+      margin-top: calc(200% - 555px);
+      // bottom: calc(-80% + 85%);
+      // bottom: -235px;//calc(100% - 90px);
+      // position: absolute;
       .created-image{
-        background-image: url('../assets/imgs/logo-cudo-putih.png');
+        background: url('../assets/imgs/logo-cudo-putih.png');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50px;
         height: 70px;
-        width: 100%;
+        width: -100%;
 
       }
       .created-label{

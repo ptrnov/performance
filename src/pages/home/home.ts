@@ -1,5 +1,12 @@
-import { Component } from '@angular/core';
-import { Platform,NavController,ToastController,Events } from 'ionic-angular';
+
+import { Component,ViewChild } from '@angular/core';
+import { ToastController,Events,IonicPage, Platform,App, NavController,MenuController, Tabs } from 'ionic-angular';
+import { LoanPengajuanPage} from '../loan-pengajuan/loan-pengajuan';
+import { LoanDatadiriPage} from '../loan-datadiri/loan-datadiri';
+import { LoanEmergencycontactPage} from '../loan-emergencycontact/loan-emergencycontact';
+import { LoanPekerjaanPenghasilanPage} from '../loan-pekerjaan-penghasilan/loan-pekerjaan-penghasilan';
+import { LoanDatatambahanPage} from '../loan-datatambahan/loan-datatambahan';
+
 // import { SelectSearchableComponent  } from 'ionic-select-searchable';
 import { Camera,CameraOptions } from '@ionic-native/camera';
 import { DatePicker } from '@ionic-native/date-picker';
@@ -10,6 +17,8 @@ import { AppReportPage,} from '../../pages/app-report/app-report';
 import { AppTaskPage } from '../../pages/app-task/app-task';
 import { AppProductPage} from '../../pages/app-product/app-product';
 import { LoginPage } from '../login/login';
+import { HomeMenu1Page } from '../home-menu1/home-menu1';
+import { HomeMenu2Page } from '../home-menu2/home-menu2';
 class Port {
   public id: number;
   public name: string;
@@ -19,6 +28,11 @@ class Port {
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  @ViewChild('myTabs') tabRef:Tabs;
+
+  homeMenu1Root = HomeMenu1Page;
+  homeMenu2Root = HomeMenu2Page;
 
 userProfile=[];
 

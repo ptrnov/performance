@@ -1,8 +1,9 @@
-import {Component} from "@angular/core";
-import {NavController,Platform,App, AlertController, ToastController, MenuController,Config,Events} from "ionic-angular";
+import {Component,} from "@angular/core";
+import {NavController,Keyboard,Platform,App, AlertController, ToastController, MenuController,Config,Events} from "ionic-angular";
 import { HomePage } from "../home/home";
 import { WelcomePage } from "../welcome/welcome";
 import { DatabaseProvider } from '../../providers/database/database';
+// import { Keyboard } from 'ionic-';
 
 @Component({
   selector: 'page-login',
@@ -20,7 +21,8 @@ export class LoginPage {
       public config:Config,
       public events: Events,
       public platform: Platform,
-      public app:App
+      public app:App,
+      public keyboard: Keyboard
   ){
     this.menu.swipeEnable(false);
     this.platform.registerBackButtonAction(() => {
@@ -35,6 +37,12 @@ export class LoginPage {
             console.log("back=",activeView.name);
         }
     });
+  }
+
+  ionViewDidEnter() {
+    // this.platform.ready().then(() => {
+    //     this.keyboard.de.disableScroll(true);
+    // });
   }
 
   ngOnInit() {

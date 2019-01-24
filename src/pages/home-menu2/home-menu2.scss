@@ -1,0 +1,146 @@
+page-home-menu2 {
+  .content-body{
+    background-color: white;
+    color: #8D9091;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .grid-column{
+    width: 100%!important;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    // color: #8D9091;
+    .row-menu1{
+      padding: 0px 0px 0px 0px;
+      margin-top: 10px;
+      width: 100%!important;
+      position: relative;
+      .box1{
+        padding: 0 0 0 0;
+        background-image: url(../assets/imgs/background_tosca.png);
+        background-repeat: no-repeat;
+        background-position: content;
+        background-size: 400px;
+        height: 185px;
+        margin: 0;
+        border-radius: 1px 18px 16px 13px;
+        position: absolute;
+        text-align: right;
+        .avatar{
+          padding: 0px 0px 0px 0px;
+          border-radius: 50%;
+          width: 80px;
+          height: 80px;
+          margin-top: -5px;
+          margin-left: 19px;
+          margin: 20px 0px 30px 24px;
+        }
+        .content{
+          padding: 25px 0px 0px 0px;
+          width: 60%;
+          background-color: transparent;
+          text-align: right;
+          .text1{
+            margin-top: -15px;
+            font-size: 35px;
+            font-weight: 400;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          .garis{
+            border: 1px dotted  white;
+            border-radius: 1px;
+          }
+          .text2{
+            font-size: 25px;
+            font-weight: 400;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          .text3{
+            font-size: 15px;
+            font-weight: 400;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+            // margin: 14px 10px 17px 38px;
+
+        }
+      }
+    }
+    .row-menu2{
+      padding: 0px 0px 0px 0px;
+      margin-top: 10px;
+      width: auto;
+      margin-top: 210px;
+      .box2{
+        padding: 0 0 0 0;
+        background-image: url(../assets/imgs/background_biru.png);
+        background-repeat: no-repeat;
+        background-position: content;
+        background-size: 400px;
+        height: 185px;
+        margin: 0;
+        border-radius: 1px 18px 16px 13px;
+        position: absolute;
+        text-align: right;
+        .avatar{
+          padding: 0px 0px 0px 0px;
+          border-radius: 50%;
+          width: 80px;
+          height: 80px;
+          margin-top: -5px;
+          margin-left: 19px;
+          margin: 20px 0px 30px 24px;
+        }
+        .content{
+          padding: 25px 0px 0px 0px;
+          width: 60%;
+          background-color: transparent;
+          text-align: right;
+          .text1{
+            margin-top: -15px;
+            font-size: 35px;
+            font-weight: 400;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          .garis{
+            border: 1px dotted  white;
+            border-radius: 1px;
+          }
+          .text2{
+            font-size: 25px;
+            font-weight: 400;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          .text3{
+            font-size: 15px;
+            font-weight: 400;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+            // margin: 14px 10px 17px 38px;
+
+        }
+      }
+
+    }
+  }
+
+  .title-Label-button{
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(141, 49, 49);
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+
+}

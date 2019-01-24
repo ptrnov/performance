@@ -25,7 +25,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   showSplash = false;
-  rootPage: any = WelcomePage;
+  rootPage: any = LoginPage;
+  // rootPage: any = WelcomePage;
   activePage: any;
 
   // pages: Array<{title: string, component: any}>;
