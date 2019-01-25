@@ -59,10 +59,10 @@ export class MyApp {
       // {id:'side-button[2]', title: 'Pengecekan Kendaraan', component: NokendaraanPage, icon: 'ios-checkmark-circle-outline', color:'light'},
       // {id:'side-button[3]', title: 'Laporan Kecelakaan', component: FormkecelakaanPage, icon: 'ios-checkmark-circle-outline', color:'light'},
       // {id:'side-button[4]', title: 'Laporan Tilang', component: TilangPage, icon: 'ios-checkmark-circle-outline', color:'light'},
-      {id:'side-button[0]', title: 'Dashboard', component: HomePage, icon: 'assets/imgs/home2.png', color:'light'},
-      {id:'side-button[1]', title: 'Station', component: MapPage, icon: 'assets/imgs/sim.png', color:'light'},
-      {id:'side-button[2]', title: 'Map', component: StationPage, icon: 'assets/imgs/pengecekan_kendaraan1.png', color:'light'},
-      {id:'side-button[3', title: 'Comparison', component: ComparasionPage, icon: 'assets/imgs/tilang.png', color:'light'},
+      {id:'side-button[0]', title: 'Dashboard', component: HomePage, icon: 'assets/imgs/dashboard.png', color:'light'},
+      {id:'side-button[1]', title: 'Station', component: StationPage, icon: 'assets/imgs/station.png', color:'light'},
+      {id:'side-button[2]', title: 'Map', component: MapPage, icon: 'assets/imgs/map.png', color:'light'},
+      {id:'side-button[3', title: 'Comparison', component: ComparasionPage, icon: 'assets/imgs/comparison.png', color:'light'},
      ];
 
     // this.events.subscribe('profileLogin', (data:any) =>{
