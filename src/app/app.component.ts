@@ -4,19 +4,21 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Keyboard } from '@ionic-native/keyboard';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { DatabaseProvider } from '../providers/database/database';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { MapPage } from '../pages/map/map';
+import { StationPage } from '../pages/station/station';
+import { ComparasionPage } from '../pages/comparasion/comparasion';
 
-// export interface MenuItem {
-//   id:string;
-//   title: string;
-//   component: any;
-//   icon: string;
-//   color:any
-// }
+export interface MenuItem {
+  id:string;
+  title: string;
+  component: any;
+  icon: string;
+  color:any
+}
 @Component({
   templateUrl: 'app.html'
 
@@ -30,7 +32,7 @@ export class MyApp {
   activePage: any;
 
   // pages: Array<{title: string, component: any}>;
-  // appMenuItems: Array<MenuItem>;
+  appMenuItems: Array<MenuItem>;
   // profileData:any;
 
   constructor(
@@ -50,21 +52,18 @@ export class MyApp {
     //   this.database.initProvider();
     // });
 
-    // this.appMenuItems=[];
-    // this.appMenuItems = [
-    //   // {id:'side-button[0]', title: 'Menu', component: HomePage, icon: 'ios-checkmark-circle-outline', color:'light'},
-    //   // {id:'side-button[1]', title: 'Pengecekan SIM', component: SimPage, icon: 'ios-checkmark-circle-outline', color:'light'},
-    //   // {id:'side-button[2]', title: 'Pengecekan Kendaraan', component: NokendaraanPage, icon: 'ios-checkmark-circle-outline', color:'light'},
-    //   // {id:'side-button[3]', title: 'Laporan Kecelakaan', component: FormkecelakaanPage, icon: 'ios-checkmark-circle-outline', color:'light'},
-    //   // {id:'side-button[4]', title: 'Laporan Tilang', component: TilangPage, icon: 'ios-checkmark-circle-outline', color:'light'},
-    //   {id:'side-button[0]', title: 'Menu', component: HomePage, icon: 'assets/imgs/home.png', color:'light'},
-    //   {id:'side-button[1]', title: 'Pengecekan SIM', component: SimPage, icon: 'assets/imgs/sim.png', color:'light'},
-    //   {id:'side-button[2]', title: 'Pengecekan Kendaraan', component: NokendaraanPage, icon: 'assets/imgs/pengecekan_kendaraan1.png', color:'light'},
-    //   {id:'side-button[3', title: 'Laporan Tilang', component: TilangPage, icon: 'assets/imgs/tilang.png', color:'light'},
-    //   {id:'side-button[4]', title: 'Berita Lantas', component: BeritalantasPage, icon: 'assets/imgs/newspaper.png', color:'light'},
-    //   {id:'side-button[5]', title: 'Berita Polda', component: BeritapoldaPage, icon: 'assets/imgs/berita_polda.png', color:'light'},
-    //   {id:'side-button[6]', title: 'Peta Lantas', component: PetalantasPage, icon: 'assets/imgs/map.png', color:'light'},
-    // ];
+    this.appMenuItems=[];
+    this.appMenuItems = [
+      // {id:'side-button[0]', title: 'Menu', component: HomePage, icon: 'ios-checkmark-circle-outline', color:'light'},
+      // {id:'side-button[1]', title: 'Pengecekan SIM', component: SimPage, icon: 'ios-checkmark-circle-outline', color:'light'},
+      // {id:'side-button[2]', title: 'Pengecekan Kendaraan', component: NokendaraanPage, icon: 'ios-checkmark-circle-outline', color:'light'},
+      // {id:'side-button[3]', title: 'Laporan Kecelakaan', component: FormkecelakaanPage, icon: 'ios-checkmark-circle-outline', color:'light'},
+      // {id:'side-button[4]', title: 'Laporan Tilang', component: TilangPage, icon: 'ios-checkmark-circle-outline', color:'light'},
+      {id:'side-button[0]', title: 'Dashboard', component: HomePage, icon: 'assets/imgs/home2.png', color:'light'},
+      {id:'side-button[1]', title: 'Station', component: MapPage, icon: 'assets/imgs/sim.png', color:'light'},
+      {id:'side-button[2]', title: 'Map', component: StationPage, icon: 'assets/imgs/pengecekan_kendaraan1.png', color:'light'},
+      {id:'side-button[3', title: 'Comparison', component: ComparasionPage, icon: 'assets/imgs/tilang.png', color:'light'},
+     ];
 
     // this.events.subscribe('profileLogin', (data:any) =>{
     //     // console.log("profile login=",data);

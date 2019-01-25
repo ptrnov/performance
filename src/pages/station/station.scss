@@ -1,0 +1,19 @@
+page-station {
+  .content-body{
+    background-color: white;
+    color: #8D9091;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .header{
+    .image{
+      background-image: url('../assets/imgs/login_performance.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 150px;
+      // background: rgb(190, 200, 219)!important;
+      height:60px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}

@@ -69,6 +69,7 @@ body{
 */
 .content {
 background-color: #352B2A; //Background
+// background: linear-gradient(to right, #0B437B, #3579AE);
 }
 .buttonSignOut{
   background-color:#d40707;
@@ -460,13 +461,14 @@ background-color: #fff;
   display: inline-block;
   border-radius: 50%;
   border: 3px solid rgb(250, 250, 250);
+  color: #FAFBFC;
   // box-shadow: inset 0 0 10rem rgba(0,0,0,.25), 0 0 4rem rgba(255,255,255,.45);
   img {
     border-radius: 50%;
   }
 }
 .toolbar-background {
-  background-image: url('../assets/imgs/background.jpg');
+  // background-image: url('../assets/imgs/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   // background-image: linear-gradient(135deg, color($colors, primary), color($colors, primary)); // background-image: gradiasi

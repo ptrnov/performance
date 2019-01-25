@@ -1,24 +1,14 @@
 
 import { Component,ViewChild } from '@angular/core';
 import { ToastController,Events,IonicPage, Platform,App, NavController,MenuController, Tabs } from 'ionic-angular';
-import { LoanPengajuanPage} from '../loan-pengajuan/loan-pengajuan';
-import { LoanDatadiriPage} from '../loan-datadiri/loan-datadiri';
-import { LoanEmergencycontactPage} from '../loan-emergencycontact/loan-emergencycontact';
-import { LoanPekerjaanPenghasilanPage} from '../loan-pekerjaan-penghasilan/loan-pekerjaan-penghasilan';
-import { LoanDatatambahanPage} from '../loan-datatambahan/loan-datatambahan';
-
 // import { SelectSearchableComponent  } from 'ionic-select-searchable';
 import { Camera,CameraOptions } from '@ionic-native/camera';
 import { DatePicker } from '@ionic-native/date-picker';
 import { RestProvider } from '../../providers/rest/rest';
-// import { LoanPage } from '../../pages/loan/loan';
-import { AppformPage } from '../../pages/appform/appform';
-import { AppReportPage,} from '../../pages/app-report/app-report';
-import { AppTaskPage } from '../../pages/app-task/app-task';
-import { AppProductPage} from '../../pages/app-product/app-product';
 import { LoginPage } from '../login/login';
 import { HomeMenu1Page } from '../home-menu1/home-menu1';
 import { HomeMenu2Page } from '../home-menu2/home-menu2';
+import { HomeMenuAllPage } from '../home-menu-all/home-menu-all';
 class Port {
   public id: number;
   public name: string;
@@ -31,6 +21,7 @@ export class HomePage {
 
   @ViewChild('myTabs') tabRef:Tabs;
 
+  homeMenuAllRoot = HomeMenuAllPage;
   homeMenu1Root = HomeMenu1Page;
   homeMenu2Root = HomeMenu2Page;
 
@@ -122,21 +113,21 @@ userProfile=[];
       });
   }
 
-  public appform(){
-    this.navCtrl.setRoot(AppformPage);
-  }
-  public appProduct(){
-    this.navCtrl.setRoot(AppProductPage);
-  }
+  // public appform(){
+  //   this.navCtrl.setRoot(AppformPage);
+  // }
+  // public appProduct(){
+  //   this.navCtrl.setRoot(AppProductPage);
+  // }
 
-  public mytask(){
-    this.navCtrl.setRoot(AppTaskPage);
-  }
+  // public mytask(){
+  //   this.navCtrl.setRoot(AppTaskPage);
+  // }
 
-  public laporan(){
-    this.navCtrl.setRoot(AppReportPage);
+  // public laporan(){
+  //   this.navCtrl.setRoot(AppReportPage);
 
-  }
+  // }
   public logoff(){
     this.navCtrl.setRoot(LoginPage);
   }

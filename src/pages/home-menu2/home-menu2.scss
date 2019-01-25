@@ -141,6 +141,116 @@ page-home-menu2 {
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  // Nge-Datatable
+  .card-tabel{
+    margin-top: 200px;
+    padding: 5px 9px 5px 8px;
+    width:105%!important;
+    height: 259px!important;
+    margin-left: -5px;
+    margin-right: -5px;
+    border: 1px solid #8D9091;
+    border-radius: 7px 7px 7px 7px;
+    background-color:transparent;
+    .label_tabel{
+      margin: 1px 9px -13px 10px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #8D9091;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .content_tabel{
+      padding: 0 0 0 0;
+      width:104%!important;
+      margin-left: -5px;
+      background-color:transparent;
+      .grid_row{
+        padding: 0 0 0 0;
+        width:104%!important;
+      }
+      .tabel{
+        margin-bottom: 50px;
+        .datatable-header {
+          background:#3579AE;// rgba(164, 192, 214,1);
+          padding: 7px 0px 0px 0px;
+          argin: 0 0 -5px 0px;
+          color: white;
+        }
+        .datatable-header-cell {
+            margin: 0 0 0 0;
+            font-size: 10px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .datatable-body-row {
+            padding: 0;
+            height: 100%!important;
+        }
+        .datatable-row-even {
+            background: rgba(240, 240, 240, 1);
+            font-size: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .datatable-row-odd {
+            background: rgba(255, 255, 255,1);
+            font-size: 10px;
+        }
+        .datatable-body-cell {
+            padding: 0 0 0 0;
+            height: 30px!important;
+            .datatable-body-cell-label{
+              font-size: 10px;
+              vertical-align: middle;
+              margin-top: 7px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+
+        // Style footer appearance
+        .datatable-footer {
+          background: #3579AE;//rgba(218, 226, 234,1);
+          padding: 0 0 0 5px;
+          color: white;
+          font-size: 10px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+          .pager {
+            li {
+                padding: 0 1em !important;
+                a {
+                  color: rgba(68, 68, 68, 1);
+                  text-decoration: none;
+                }
+            }
+          }
+        }
+        // Style rules for the footer pagination elements
+        .datatable-icon-done-all:before {
+            content: ">>";
+        }
+        .datatable-icon-left:before {
+            content: "<";
+        }
+        .datatable-icon-right:before {
+            content: ">";
+        }
+
+        .datatable-icon-skip:before {
+            content: ">>";
+        }
+        .datatable-icon-prev:before {
+            content: "<<";
+        }
+      }
+      // .datatable-body-cell{
+      //   text-align: right;
+      // }
+      .datatable .datatable-row-right {
+        display: flex;
+      }
+    }
+  }
 
 
 }

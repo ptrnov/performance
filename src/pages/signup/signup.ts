@@ -7,7 +7,7 @@ import { DatePicker } from '@ionic-native/date-picker';
 import { Base64 } from '@ionic-native/base64';
 import { RestProvider } from '../../providers/rest/rest';
 import { WelcomePage } from "../welcome/welcome";
-import { SignupAuthenticationPage } from '../../pages/signup-authentication/signup-authentication';
+// import { SignupAuthenticationPage } from '../../pages/signup-authentication/signup-authentication';
 @IonicPage()
 @Component({
   selector: 'page-signup',
@@ -113,7 +113,7 @@ export class SignupPage {
     //   console.log("data image=",rslt);
     // });
 
-    this.navCtrl.setRoot(SignupAuthenticationPage);
+    // this.navCtrl.setRoot(SignupAuthenticationPage);
 
   }
 

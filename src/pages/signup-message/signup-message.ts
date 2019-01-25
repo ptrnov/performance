@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Etraining1Page } from '../../pages/etraining1/etraining1';
 
 @IonicPage()
 @Component({
@@ -18,7 +17,7 @@ export class SignupMessagePage {
 
   public next(){
     // this.navCtrl.push(LoanDatatambahanEvidancePage);
-    this.navCtrl.setRoot(Etraining1Page);
+    // this.navCtrl.setRoot(Etraining1Page);
   }
 
 }
