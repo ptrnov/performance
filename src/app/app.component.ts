@@ -182,6 +182,12 @@ export class MyApp {
   }
 
   logout() {
-    this.nav.setRoot(LoginPage);
+    // this.nav.removeView('myTabs');
+    // this.local.remove('myTabs');
+    // localStorage.removeItem("myTabs");
+    // this.nav.setRoot(LoginPage);
+    this.app.getRootNav().setRoot(LoginPage);
+    // this.nav.parent.parent.setRoot(LoginPage);
+    // this.app.getRootNav().setRoot
   }
 }

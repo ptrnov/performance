@@ -10,17 +10,17 @@
                     <img src="assets/imgs/tt_100.png" class="avatar">
                   </ion-avatar>
                   <ion-card-content class="content">
-                      <h1 class="text1">1,200</h1>
+                      <h1 class="text1">{{dataBoxTT.tot_tt}}</h1>
                       <hr class="garis">
                       <ion-row>
                         <ion-col col-4>
-                          <h2 class="text2">450</h2>
+                          <h2 class="text2">{{dataBoxTT.tot_open}}</h2>
                         </ion-col>
                         <ion-col col-4>
-                          <h2 class="text2">235</h2>
+                          <h2 class="text2">{{dataBoxTT.closed_tt}}</h2>
                         </ion-col>
                         <ion-col col-4>
-                          <h2 class="text2">36</h2>
+                          <h2 class="text2">{{dataBoxTT.tot_aging}}</h2>
                         </ion-col>
                       </ion-row>
                       <ion-row>
@@ -46,17 +46,17 @@
                     <img src="assets/imgs/pm_100.png" class="avatar">
                   </ion-avatar>
                   <ion-card-content class="content">
-                      <h1 class="text1">1,124</h1>
+                      <h1 class="text1">{{dataBoxPM.tot_pm}}</h1>
                       <hr class="garis">
                       <ion-row>
                         <ion-col col-4>
-                          <h2 class="text2">225</h2>
+                          <h2 class="text2">{{dataBoxPM.open_pm}}</h2>
                         </ion-col>
                         <ion-col col-4>
-                          <h2 class="text2">676</h2>
+                          <h2 class="text2">{{dataBoxPM.expired_pm}}</h2>
                         </ion-col>
                         <ion-col col-4>
-                          <h2 class="text2">44</h2>
+                          <h2 class="text2">{{dataBoxPM.aging_pm}}</h2>
                         </ion-col>
                       </ion-row>
                       <ion-row>
@@ -75,7 +75,7 @@
               </ion-row>
           </ion-item>
         </ion-row>
-        <ion-row justify-content-center>
+        <!-- <ion-row justify-content-center>
           <ion-card class="card-tabel">
             <ion-card-content class="content_tabel">
                 <h1 class="label_tabel">Top 5 Station Of The Month</h1>
@@ -89,15 +89,15 @@
                       [columns]="columns_table"
                       [columnMode]="'force'"
                       [limit]="5">
-                      <!-- <ngx-datatable-column name="Rengking">
+                       <ngx-datatable-column name="Rengking">
                         <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
                           <div style="text-align:center"></div>
                         </ng-template>
-                      </ngx-datatable-column> -->
+                      </ngx-datatable-column>
                     </ngx-datatable>
                   </ion-col>
             </ion-card-content>
           </ion-card>
-      </ion-row>
+      </ion-row> -->
     </ion-grid>
 </ion-content>

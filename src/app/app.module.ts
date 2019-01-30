@@ -51,8 +51,8 @@ import { StationPage } from '../pages/station/station';
     HttpModule,
     IonicModule.forRoot(MyApp, {
       // preloadModules: false,
-      scrollPadding: false,
-      scrollAssist: true,
+      // scrollPadding: false,
+      // scrollAssist: true,
       autoFocusAssist: false,
       bulan: 10,
       tahun: 2018,

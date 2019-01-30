@@ -15,29 +15,29 @@ body{
   // background-color: #1C1F26;
 }
 
-.logo{
-  background-image: url(../assets/imgs/OCBC_NISP_logo_putih.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 150px;
-    height:60px;
-    width: 100%;
-    margin-bottom: -35px;
-    margin-left: -20px;
-    text-align: right;
-}
+// .logo{
+//   background-image: url(../assets/imgs/OCBC_NISP_logo_putih.png);
+//     background-repeat: no-repeat;
+//     background-position: right;
+//     background-size: 150px;
+//     height:60px;
+//     width: 100%;
+//     margin-bottom: -35px;
+//     margin-left: -20px;
+//     text-align: right;
+// }
 
-.logo-input{
-    background-image: url(../assets/imgs/OCBC_NISP_logo.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 150px;
-    height:60px;
-    width: 100%;
-    margin-bottom: -35px;
-    margin-left: -20px;
-    text-align: right;
-}
+// .logo-input{
+//     background-image: url(../assets/imgs/OCBC_NISP_logo.png);
+//     background-repeat: no-repeat;
+//     background-position: right;
+//     background-size: 150px;
+//     height:60px;
+//     width: 100%;
+//     margin-bottom: -35px;
+//     margin-left: -20px;
+//     text-align: right;
+// }
 .kalkulator{
   background-image: url(../assets/imgs/calculator.png);
   background-repeat: no-repeat;
@@ -400,52 +400,52 @@ background-color: #fff;
   z-index: 0;
 }
 
-.scroll-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(50, 10, 92, .4);
+//   .scroll-content {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background: rgba(50, 10, 92, .4);
 
-  .login-content {
-    width: 86%;
+//     .login-content {
+//       width: 86%;
 
-    .logo {
-      width: 60px;
-      height: 60px;
-      margin: 20px auto 0;
-      border-radius: 10%;
-      // background: url("../assets/imgs/ionic3-ico.png") no-repeat;
-      background-size: 100%;
-    }
+//       .logo {
+//         width: 60px;
+//         height: 60px;
+//         margin: 20px auto 0;
+//         border-radius: 10%;
+//         // background: url("../assets/imgs/ionic3-ico.png") no-repeat;
+//         background-size: 100%;
+//       }
 
-    .list-form {
-      padding: 0;
-      margin-bottom: 0;
+//       .list-form {
+//         padding: 0;
+//         margin-bottom: 0;
 
-      ion-item {
-        background: none;
-        padding: 0;
+//         ion-item {
+//           background: none;
+//           padding: 0;
 
-        &:first-child {
-          border-top: none;
-        }
+//           &:first-child {
+//             border-top: none;
+//           }
 
-        &:after {
-          display: none;
-        }
+//           &:after {
+//             display: none;
+//           }
 
-        ion-label {
-          font-size: 1em;
-          color: color($colors, primary);
-        }
+//           ion-label {
+//             font-size: 1em;
+//             color: color($colors, primary);
+//           }
 
-        input {
-          color: color($colors, primary);
-        }
-      }
-    }
-  }
-}
+//           input {
+//             color: color($colors, primary);
+//           }
+//         }
+//       }
+//     }
+//   }
 }
 
 /* LIFE MENU - PROFILE
