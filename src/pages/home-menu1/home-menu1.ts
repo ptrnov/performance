@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Events,IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
 
@@ -19,8 +19,20 @@ export class HomeMenu1Page {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public rest:RestProvider
+    public rest:RestProvider,
+    public events:Events
   ) {
+
+    this.events.subscribe('tglPeriode', (data) =>{
+        setTimeout(() => {
+          console.log("tab subscrip tgl=",data);
+          // console.log("tab config=",this.config.get('tahun')+"/" +this.config.get("bulan"));
+          this.dataFilter.tahun=data.year;
+          this.dataFilter.bulan=("0" + data.month).slice(-2);
+          console.log("tab all2=",this.dataFilter.tahun);
+          this.getBoxAll(this.dataFilter);
+        }, 1);
+    });
 
     this.columns_table=[
       { name: 'Rengking',prop: 'Rengking', width: 2},
@@ -42,12 +54,12 @@ export class HomeMenu1Page {
   ionViewDidLoad() {
     console.log('Tab1');
     setTimeout(() => {
-      this.getBoxAll();
+      this.getBoxAll(this.dataFilter);
     }, 1000);
   }
 
-  public getBoxAll(){
-    this.rest.postOption('dashboard/semuas/box-operator',this.dataFilter).then((rslt:any)=>{
+  public getBoxAll(tglFilter:any){
+    this.rest.postOption('dashboard/semuas/box-operator',tglFilter).then((rslt:any)=>{
       console.log("box_tt=",rslt.box_tt);
       this.dataBoxTT.tot_tt=rslt.box_tt['tot_tt'];
       this.dataBoxTT.tot_open=rslt.box_tt['tot_open'];

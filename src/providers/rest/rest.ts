@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class RestProvider {
+  // private url: string ="http://apiperformance.syaira.net";
   private url: string ="http://localhost";
   constructor(
     private http: Http

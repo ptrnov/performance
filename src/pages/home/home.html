@@ -4,26 +4,31 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <div class="image"></div>
+    <ion-buttons end>
+      <!-- <button ion-button tappable (click)="presentNotifications($event)"> -->
+      <!-- <button ion-button  class="circle"> -->
+          <!-- <img class="home-indikator" src="../assets/img/circle_btn_red"> -->
+        <!-- <ion-icon name="notifications"></ion-icon> -->
+      <!-- </button> -->
+      <!-- <button ion-button tappable (click)="goToAccount()"> -->
+      <!-- <button ion-button tappable>
+          <img class="home-satelit" src="assets/img/satellite.png">
+      </button> -->
+      <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-  <!-- <div class="logo"></div>
-    <div class="header-page">
-        <div class="user-avatar">
-            <img src="assets/imgs/avatar.jpg" width="120px"  height="120px"/>
-        </div>
-        <div class="user" *ngFor="let x1 of userProfile">
-          <label class="label">Catrine  |  Agent Sales  | 22122018</label><br>
-
-        </div>
-    </div> -->
+  
 </ion-header>
 
 
 <ion-content padding class="content-body">
   <ion-tabs #myTabs tabsPlacement="top" tabsHighlight=true clss="tab_menu" >
     <!-- <ion-tab [root]="loanDatadiriRoot" tabTitle="Loan datadiri" tabIcon="information-circle"></ion-tab> -->
-      <ion-tab [root]="homeMenuAllRoot"></ion-tab>
-      <ion-tab [root]="homeMenu1Root"></ion-tab>
-      <ion-tab [root]="homeMenu2Root"></ion-tab>
+      <ion-tab [root]="homeMenuAllRoot" tabIcon="icontab1"></ion-tab>
+      <ion-tab [root]="homeMenu1Root"   tabIcon="icontab2"></ion-tab>
+      <ion-tab [root]="homeMenu2Root"   tabIcon="icontab3"></ion-tab>
   </ion-tabs>
 </ion-content>
 

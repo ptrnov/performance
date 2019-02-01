@@ -1,0 +1,30 @@
+<!-- -->
+<ion-header class="no-shadow">
+
+  <ion-navbar class="no-border">
+    <ion-title>
+      <ion-icon name="cog" class="text-primary"></ion-icon>
+      <span class="text-primary">Settings</span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="common-bg">
+  <!-- App settings-->
+  <ion-item-group>
+    <ion-item-divider color="primary" class="bold">Filter Settings</ion-item-divider>
+    <ion-item>
+      <ion-label>Filter By Date</ion-label>
+      <ion-datetime  displayFormat="MMMM YYYY" picker-format="MMMM YYYY" [(ngModel)]="myDate" (ionChange)="tanggal($event)"></ion-datetime>
+    </ion-item>
+    <ion-item style="background-color:white">
+      <ion-label> Notifications ?</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+  </ion-item-group>
+
+  <!--sign out button-->
+  <button ion-button color="primary" full tappable (click)="logout()">LOG OUT</button>
+
+</ion-content>

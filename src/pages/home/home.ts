@@ -2,13 +2,13 @@
 import { Component,ViewChild } from '@angular/core';
 import { ToastController,Events,IonicPage, Platform,App, NavController,MenuController, Tabs } from 'ionic-angular';
 // import { SelectSearchableComponent  } from 'ionic-select-searchable';
-import { Camera,CameraOptions } from '@ionic-native/camera';
 import { DatePicker } from '@ionic-native/date-picker';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../login/login';
 import { HomeMenu1Page } from '../home-menu1/home-menu1';
 import { HomeMenu2Page } from '../home-menu2/home-menu2';
 import { HomeMenuAllPage } from '../home-menu-all/home-menu-all';
+import { SettingsPage } from '../settings/settings';
 class Port {
   public id: number;
   public name: string;
@@ -31,7 +31,6 @@ userProfile=[];
     public navCtrl: NavController,
     private platform: Platform,
     public events: Events,
-    private camera: Camera,
     public toastCtrl: ToastController,
     private datePicker: DatePicker,
     public rest:RestProvider
@@ -138,34 +137,34 @@ userProfile=[];
 
 
   public ambilPhoto(){
-    this.platform.ready().then(() => {
-      if (this.platform._platforms[0] == 'cordova') {
-        const options: CameraOptions = {
-          quality: 100,
-          destinationType: this.camera.DestinationType.FILE_URI,
-          encodingType: this.camera.EncodingType.JPEG,
-          mediaType: this.camera.MediaType.PICTURE
-        }
+    // this.platform.ready().then(() => {
+    //   if (this.platform._platforms[0] == 'cordova') {
+    //     const options: CameraOptions = {
+    //       quality: 100,
+    //       destinationType: this.camera.DestinationType.FILE_URI,
+    //       encodingType: this.camera.EncodingType.JPEG,
+    //       mediaType: this.camera.MediaType.PICTURE
+    //     }
 
-        this.camera.getPicture(options).then((imageData) => {
-          // imageData is either a base64 encoded string or a file URI
-          // If it's base64 (DATA_URL):
-          var base64Image = 'data:image/jpeg;base64,' + imageData;
-          console.log("dataImage" + imageData);
-          var ImgDes1=<HTMLImageElement>document.getElementById("pic1");
-          ImgDes1.src=imageData;
-         }, (err) => {
-          console.log("erro image", err);
-         });
-      }else{
-        let toasPic = this.toastCtrl.create({
-          message: 'Camera belum ada ...',
-          duration: 3000,
-          position: 'middle'
-        });
-        toasPic.present();
-      }
-    });
+    //     this.camera.getPicture(options).then((imageData) => {
+    //       // imageData is either a base64 encoded string or a file URI
+    //       // If it's base64 (DATA_URL):
+    //       var base64Image = 'data:image/jpeg;base64,' + imageData;
+    //       console.log("dataImage" + imageData);
+    //       var ImgDes1=<HTMLImageElement>document.getElementById("pic1");
+    //       ImgDes1.src=imageData;
+    //      }, (err) => {
+    //       console.log("erro image", err);
+    //      });
+    //   }else{
+    //     let toasPic = this.toastCtrl.create({
+    //       message: 'Camera belum ada ...',
+    //       duration: 3000,
+    //       position: 'middle'
+    //     });
+    //     toasPic.present();
+    //   }
+    // });
   }
 
   public testApiKendaraan(){
@@ -187,4 +186,9 @@ userProfile=[];
       console.log("data-SIM",data);
     });
   }
+
+  private goToAccount() {
+    this.navCtrl.push(SettingsPage);
+  }
+
 }

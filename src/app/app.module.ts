@@ -14,11 +14,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 // import { SelectSearchableModule  } from 'ionic-select-searchable';
 import { DatabaseProvider } from '../providers/database/database';
-import { Camera } from '@ionic-native/camera';
 import { DatePicker } from '@ionic-native/date-picker';
 import { Base64 } from '@ionic-native/base64';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { RestProvider } from '../providers/rest/rest';
 import { SignupAuthenticationPage } from '../pages/signup-authentication/signup-authentication';
@@ -29,6 +27,8 @@ import { HomeMenuAllPage } from '../pages/home-menu-all/home-menu-all';
 import { ComparasionPage } from '../pages/comparasion/comparasion';
 import { MapPage } from '../pages/map/map';
 import { StationPage } from '../pages/station/station';
+import { SettingsPage } from '../pages/settings/settings';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +43,8 @@ import { StationPage } from '../pages/station/station';
     HomeMenuAllPage,
     ComparasionPage,
     MapPage,
-    StationPage
+    StationPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -54,8 +55,8 @@ import { StationPage } from '../pages/station/station';
       // scrollPadding: false,
       // scrollAssist: true,
       autoFocusAssist: false,
-      bulan: 10,
-      tahun: 2018,
+      bulan: '01',
+      tahun: '2018',
       real_name:'none',
       user_group:'none'
     }),
@@ -77,7 +78,8 @@ import { StationPage } from '../pages/station/station';
     HomeMenuAllPage,
     ComparasionPage,
     MapPage,
-    StationPage
+    StationPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
@@ -87,10 +89,8 @@ import { StationPage } from '../pages/station/station';
     DatabaseProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseProvider,
-    Camera,
     DatePicker,
     Base64,
-    BarcodeScanner,
     RestProvider
   ]
 })

@@ -6,16 +6,16 @@
             <ion-row>
               <ion-col col-4>
                   <div class="user-avatar">
-                    <img src="assets/imgs/avatar.jpg" height:110px>
+                    <img src="{{profileData.user_picture}}" height:110px>
                   </div>
               </ion-col>
               <!-- <ion-col padding-top col-8 *ngFor="let item of profileData"> -->
               <!-- <ion-col padding-top col-8 *ngFor="let item of profileData"> -->
               <ion-col padding-top col-8>
-                <h4 ion-text class="no-margin bold text-white" style="margin-left:6px;">
-                  <!-- {{item.nama}} -->
-                  Unggul Abimanyu
-                </h4>
+                <h5 ion-text class="no-margin bold text-white" style="margin-left:6px;">
+                  {{profileData.user_name}}
+                  <!-- Unggul Abimanyu -->
+                </h5>
                 <span ion-text class="text-white"  style="margin-left:6px; font-size: 12px">
                   <!-- {{item.jabatan}} -->
                   Kadiv | 89050774
@@ -23,7 +23,7 @@
                 <span ion-text class="text-white" style="margin-left:6px; font-size: 12px">
                     <!-- {{item.jabatan}} -->
                     Jakarta SCTV
-                  </span>
+                </span>
 
                 <!-- <span ion-text color="putih">Area</span> -->
               </ion-col>
@@ -32,10 +32,10 @@
 
             <ion-row no-padding class="other-data">
               <ion-col no-padding class="column">
-                <button ion-button icon-left small full menuClose enable>
+                <!-- <button ion-button icon-left small full menuClose enable>
                   <ion-icon name="contact"></ion-icon>
                   Edit Profile
-                </button>
+                </button> -->
               </ion-col>
               <ion-col no-padding class="column">
                 <button ion-button icon-left small full  menuClose (click)="logout()"  class="buttonSignOut">

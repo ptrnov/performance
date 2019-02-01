@@ -33,8 +33,7 @@ export class MyApp {
 
   // pages: Array<{title: string, component: any}>;
   appMenuItems: Array<MenuItem>;
-  // profileData:any;
-
+  profileData={"user_email": "", "user_name": "","user_picture":""};
   constructor(
     public platform: Platform,
     public app:App,
@@ -47,7 +46,19 @@ export class MyApp {
   ) {
 
     this.initializeApp();
-
+    this.events.subscribe('profileLogin', (data:any) =>{
+      //     // console.log("profile login=",data);
+      var dataProfile = JSON.parse(data);
+      console.log("subscribe profileData=",dataProfile);
+      this.profileData.user_email=dataProfile['user_email'];
+      this.profileData.user_name=dataProfile['user_name'];
+      if(dataProfile['user_picture']!=''){
+        this.profileData.user_picture="http://tt.scm.co.id/assets/images/user_picture/" + dataProfile['user_picture'];
+      }else{
+        this.profileData.user_picture="assets/imgs/avatar.jpg";
+      }
+      
+  });
     // this.platform.ready().then(() => {
     //   this.database.initProvider();
     // });
@@ -64,6 +75,7 @@ export class MyApp {
       {id:'side-button[2]', title: 'Map', component: MapPage, icon: 'assets/imgs/map.png', color:'light'},
       {id:'side-button[3', title: 'Comparison', component: ComparasionPage, icon: 'assets/imgs/comparison.png', color:'light'},
      ];
+
 
     // this.events.subscribe('profileLogin', (data:any) =>{
     //     // console.log("profile login=",data);
@@ -112,6 +124,12 @@ export class MyApp {
   }
 
   initializeApp() {
+    // this.platform.ready().then(() => {
+    //   setTimeout(() => {
+    //     const data = JSON.parse(localStorage.getItem('profileLogin'));
+    //     console.log("stored=",data);
+    //   }, 7000);
+    // });
     // this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

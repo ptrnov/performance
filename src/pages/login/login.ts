@@ -11,7 +11,8 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class LoginPage {
   public responseData : any;
-  userData = {"user_email": "administrator@gmail.com","password":"administrator"};
+  dataFilter={"year":"","month":""};
+  userData = {"user_email": "yessi.gultom@indosiar.com","password":"Yessi92"};
   // userData = {user_email: "yessi.gultom@indosiar.com"};
   constructor(
       public nav: NavController,
@@ -26,6 +27,7 @@ export class LoginPage {
       public keyboard: Keyboard,
       public rest:RestProvider
   ){
+    
     // this.menu.swipeEnable(false);
     // this.platform.registerBackButtonAction(() => {
     //     let nav = this.app.getActiveNavs()[0];
@@ -75,9 +77,22 @@ export class LoginPage {
               toastSukses.present();
               toastSukses.onDidDismiss(() => {
               setTimeout(() => {
-                this.events.publish('profileLogin',rslt.result);
-                localStorage.setItem('profileLogin', JSON.stringify(rslt.result));
+                this.events.publish('profileLogin',JSON.stringify(rslt['result']));
+                localStorage.setItem('profileLogin', JSON.stringify(rslt['result']));
+
+                /**
+                 * SUBSCRIBE TANGGAL
+                 * Create By ptr.nov
+                 */
+                const tgl = new Date();
+                this.dataFilter.year= tgl.getFullYear().toString();
+                this.dataFilter.month=("0" + tgl.getMonth().toString()).slice(-2);
+                this.events.publish('tglPeriode',this.dataFilter);
+                console.log("login public tgl=",this.dataFilter);
+
+                
               }, 500);
+              
               this.nav.setRoot(HomePage);
             });
           }else{
