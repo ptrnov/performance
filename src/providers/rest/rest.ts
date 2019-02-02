@@ -76,11 +76,11 @@ export class RestProvider {
         });
   }
 
-  getDatax(activity,credentials) {
+  getDatax(activity) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       // this.http.get("http://192.168.100.3/" + "Mobile_Dashboard/login/"+ credentials)
-      this.http.get(this.url + activity + credentials)
+      this.http.get(this.url + "/" + activity)
         .subscribe(res => {
           resolve(res.json());
         }, (err) => {

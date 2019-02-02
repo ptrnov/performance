@@ -12,5 +12,27 @@
       <ion-row justify-content-left >
           <button class="title-Label-button">Comparasion</button>
       </ion-row>
+      <ion-row justify-content-left >
+          <ion-item>
+              <ion-label>
+                <ion-icon name="station1" item-start class="text-primary"></ion-icon>Station
+              </ion-label>
+              <ion-select interface="popover" cancelText="Cancel" okText="OK" (ionChange)="comboBox1Change($event)">
+                <ion-option *ngFor="let item of stationCombobox1" value="{{item.kd_station}}">
+                  {{item.name_station}} | Grade: {{item.grade}}
+                </ion-option>
+              </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label>
+                <ion-icon name="station2" item-start class="text-primary"></ion-icon>Station
+              </ion-label>
+              <ion-select interface="popover" cancelText="Cancel" okText="OK">
+                <ion-option *ngFor="let item of stationCombobox2" value="{{item.kd_station}}">
+                  {{item.name_station}} | Grade: {{item.grade}}
+                </ion-option>
+              </ion-select>
+          </ion-item>
+        </ion-row>
     </ion-grid>
 </ion-content>
