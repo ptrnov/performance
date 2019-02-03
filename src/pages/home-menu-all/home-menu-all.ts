@@ -28,14 +28,14 @@ export class HomeMenuAllPage {
 
     this.events.subscribe('tglPeriode', (data) =>{
     
-      // setTimeout(() => {
+      setTimeout(() => {
         console.log("tab subscrip tgl=",data);
         // console.log("tab config=",this.config.get('tahun')+"/" +this.config.get("bulan"));
         this.dataFilter.tahun=data.year;
         this.dataFilter.bulan=("0" + data.month).slice(-2);
         console.log("tab all2=",this.dataFilter.tahun);
         this.getBoxAll(this.dataFilter);
-      // }, 1);
+      }, 1);
 
       /**
        * SET CONFIG

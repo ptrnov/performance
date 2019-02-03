@@ -10,22 +10,22 @@
 <ion-content padding class="content-body">
     <ion-grid class="grid-column">
       <ion-row justify-content-left >
-          <button class="title-Label-button">Comparasion</button>
+          <button class="title-Label-button">Comparison</button>
       </ion-row>
-      <ion-row justify-content-left >
-          <ion-item>
+      <ion-row class="row-combobox" justify-content-left>
+          <ion-item class="dropdown-station1"> 
               <ion-label>
-                <ion-icon name="station1" item-start class="text-primary"></ion-icon>Station
+                <ion-icon name="station1" item-start class="text-primary"></ion-icon>Select
               </ion-label>
               <ion-select interface="popover" cancelText="Cancel" okText="OK" (ionChange)="comboBox1Change($event)">
                 <ion-option *ngFor="let item of stationCombobox1" value="{{item.kd_station}}">
-                  {{item.name_station}} | Grade: {{item.grade}}
+                  {{item.name_station}} | Grade:  {{item.grade}}
                 </ion-option>
               </ion-select>
           </ion-item>
-          <ion-item>
+          <ion-item class="dropdown-station1">
               <ion-label>
-                <ion-icon name="station2" item-start class="text-primary"></ion-icon>Station
+                <ion-icon name="station2" item-start class="text-primary"></ion-icon>Select
               </ion-label>
               <ion-select interface="popover" cancelText="Cancel" okText="OK">
                 <ion-option *ngFor="let item of stationCombobox2" value="{{item.kd_station}}">
@@ -33,6 +33,325 @@
                 </ion-option>
               </ion-select>
           </ion-item>
+      </ion-row>
+      <ion-row class="row-box">
+            <ion-col col-12 class="col-box">
+              <ion-item-group class="group-item">
+                  <ion-item-divider color="primary" class="batas1">Detail Station Comparison</ion-item-divider>
+                      <!-- Row-1-->
+                      <ion-row class="row-box2">  
+                        <ion-col col-4 class="col-box1">
+                          <ion-item class="col-item1">
+                              <ion-label>{{nilaiStation1.station}}</ion-label>
+                          </ion-item>
+                        </ion-col>
+                        <ion-col col-4 class="col-box2">
+                            <ion-item  class="col-item1">
+                                <ion-label>Station</ion-label>
+                              </ion-item>
+                        </ion-col>
+                        <ion-col col-4 class="col-box3">
+                            <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.station}}</ion-label>
+                              </ion-item>
+                        </ion-col>
+                      </ion-row> 
+                      <!-- Row-2 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <div>
+                                    <ion-icon name="star" *ngFor="let num of [1,2,3,4,5]"
+                                     (click)="rate(num)" [ngStyle]="{'color':getColor(num,nilaiStation1.performance)}">
+                                    </ion-icon> 
+                                </div>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Performance</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item class="col-item1">
+                                <div>
+                                    <ion-icon name="star" *ngFor="let num of [1,2,3,4,5]"
+                                    (click)="rate(num)" [ngStyle]="{'color':getColor(num,nilaiStation2.performance)}">
+                                    </ion-icon> 
+                                </div>
+                              </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-3 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.tt_Score}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>TT Score</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.tt_Score}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-4 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.pm_Score}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>PM Score</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.pm_Score}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-5 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.rankday}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Ranking saat ini</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.rankday}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-6 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.rank_highest}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Ranking tertinggi</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.rank_highest}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- TTTtrouble Ticket-->
+                      <ion-item-divider color="primary" class="batas1">TT (Trouble Ticket)</ion-item-divider>
+                      <!-- Row-7 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.tt_close}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Total Close</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.tt_close}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-8 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.tt_fastest}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Tot Fastest Closing </ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.tt_fastest}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-9 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.tt_submit}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Total Submit</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.tt_submit}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- TT PM-->
+                      <ion-item-divider color="primary" class="batas1">TT PM</ion-item-divider>
+                      <!-- Row-10 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.pm_close}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Total Close</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.pm_close}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>   
+                      <!-- Row-11 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.pm_fastest}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Tot Fastest Closing</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.pm_fastest}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>  
+                      <!-- Row-12 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.pm_sumbit}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Total Submit</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.pm_sumbit}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- MEMBER STATION-->
+                      <ion-item-divider color="primary" class="batas1">Team Member</ion-item-divider>
+                      <!-- Row-13 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.kadep}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Kadep</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.kadep}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row> 
+                      <!-- Row-14 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.korwil}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Korwil</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.korwil}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-15 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.kst}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>KST</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.kst}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row>
+                      <!-- Row-16 -->
+                      <ion-row class="row-box2">  
+                          <ion-col col-4 class="col-box1">
+                            <ion-item class="col-item1">
+                                <ion-label>{{nilaiStation1.teknisi}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box2">
+                              <ion-item  class="col-item1">
+                                  <ion-label>Teknisi</ion-label>
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 class="col-box3">
+                              <ion-item  class="col-item1">
+                                  <ion-label>{{nilaiStation2.teknisi}}</ion-label>
+                                </ion-item>
+                          </ion-col>
+                      </ion-row> 
+                      <!-- CHART -->
+                      <ion-item-divider color="primary" class="batas2">TT/PM Statistic</ion-item-divider>
+                      <ion-row>
+
+                      </ion-row> 
+                      <!-- CHART -->
+                      <ion-item-divider color="primary" class="batas2">Rank Statistic</ion-item-divider>
+                      <ion-row>
+
+                      </ion-row>                         
+                </ion-item-group>
+            </ion-col>
         </ion-row>
     </ion-grid>
 </ion-content>
