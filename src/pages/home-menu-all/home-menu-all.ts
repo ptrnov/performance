@@ -39,7 +39,7 @@ export class HomeMenuAllPage {
         this.dataFilter.bulan=("0" + data.month).slice(-2);
         console.log("tab all2=",this.dataFilter.tahun);
         this.getBoxAll(this.dataFilter);
-      }, 1);
+      }, 2);
 
       /**
        * SET CONFIG

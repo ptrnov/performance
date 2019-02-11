@@ -39,10 +39,10 @@ export class StationPage {
     ];
 
     this.rows_table1 = [
-      {'position_name':'1','Name':'JkT SCTV'},
-      {'position_name':'1','Name':'JkT SCTV'},
-      {'position_name':'1','Name':'JkT SCTV'},
-      {'position_name':'1','Name':'JkT SCTV'} 
+      {'position_name':'KST','Name':'Habibi'},
+      {'position_name':'Technician','Name':'Adi Iskandar'},
+      {'position_name':'Technician','Name':'Habibi'},
+      {'position_name':'Technician','Name':'Bustamam'} 
     ];
 
 

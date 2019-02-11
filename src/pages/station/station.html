@@ -90,24 +90,28 @@
               <div id="tt-pm-chart" style = " display : block ; " > </div>
             </ion-col>
         </ion-row>
-        <ion-row class="row-box" justify-content-center>
-            <ion-item-divider color="primary" class="batas1">Team Member</ion-item-divider>
-            <ion-col class="grid_col" col-12>
-                <ngx-datatable class="tabel"
-                  [headerHeight]="40"
-                  [footerHeight]="30"
-                  [rowHeight]="30"
-                  [rows]="rows_table1"
-                  [columns]="columns_table1"
-                  [columnMode]="'force'"
-                  [limit]="5">
-                  <!-- <ngx-datatable-column name="Rengking">
-                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                      <div style="text-align:center"></div>
-                    </ng-template>
-                  </ngx-datatable-column> -->
-                </ngx-datatable>
-            </ion-col>
+        <ion-row justify-content-center>
+            <ion-card class="card-tabel">
+              <ion-card-content class="content_tabel">
+                  <h1 class="label_tabel">Top 3 Station Of The Month</h1>
+                  <ion-col class="grid_col" col-12>
+                      <ngx-datatable class="tabel"
+                        [headerHeight]="40"
+                        [footerHeight]="30"
+                        [rowHeight]="30"
+                        [rows]="rows_table1"
+                        [columns]="columns_table1"
+                        [columnMode]="'force'"
+                        [limit]="5">
+                        <!-- <ngx-datatable-column name="Rengking">
+                          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                            <div style="text-align:center"></div>
+                          </ng-template>
+                        </ngx-datatable-column> -->
+                      </ngx-datatable>
+                    </ion-col>
+              </ion-card-content>
+            </ion-card>
         </ion-row>
         <ion-row class="row-box">
             <ion-item-divider color="primary" class="batas1">Rank Statistic</ion-item-divider>
