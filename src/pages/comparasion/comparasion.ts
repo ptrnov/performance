@@ -25,9 +25,9 @@ export class ComparasionPage {
     "kadep":"Sudarmaji","korwil":"Endang","kst":"Mujiono","teknisi":"Randi"
   };
   
-  @Input() rating: number ;
+  @Input() rating: number ; 
 
-  @Output() ratingChange: EventEmitter<number> = new EventEmitter();;
+  @Output() ratingChange: EventEmitter<number> = new EventEmitter();
 
   stationCombobox1=[{"grade":"","name_station":"","kd_station":""}];
   stationCombobox2=[{"grade":"","name_station":"","kd_station":""}];

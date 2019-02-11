@@ -12,5 +12,78 @@
       <ion-row justify-content-left >
           <button class="title-Label-button">Station Detail</button>
       </ion-row>
+      <ion-row class="row-combobox" justify-content-left>
+        <ion-item class="dropdown-station1"> 
+            <ion-label>
+              <ion-icon name="station1" item-start class="text-primary"></ion-icon>Select
+            </ion-label>
+            <ion-select interface="popover" cancelText="Cancel" okText="OK" (ionChange)="comboBoxSubmit($event)">
+              <ion-option *ngFor="let item of stationCombobox" value="{{item.kd_station}}">
+                {{item.name_station}}
+              </ion-option>
+            </ion-select>
+        </ion-item>
+      </ion-row>
+      <ion-row class="row-station">
+          <ion-col col-12 class="col-station">
+            <ion-item-divider color="primary" class="batas1">Detail Station</ion-item-divider>
+            <ion-row>
+              <ion-col col-6>
+                  <ion-card>
+                      <ion-card-header class="header1">
+                          <ion-label class="lbl_rengking">Ranking</ion-label>
+                      </ion-card-header>
+                      <ion-card-content class="content1">
+                          <ion-label class="lbl_value"> 15</ion-label>
+                      </ion-card-content>
+                    </ion-card>
+              </ion-col>
+              <ion-col col-6>
+                <ion-card>
+                  <ion-card-header class="header2">
+                      <div class="image-piala"></div>
+                  </ion-card-header>
+                  <ion-card-content class="content2">
+                      <!-- <ion-label class="label"> 15</ion-label> -->
+                      <div class="label">
+                        <ion-icon name="star" *ngFor="let num of [1,2,3,4,5]"
+                         (click)="rateStar(num)" [ngStyle]="{'color':getColor(num,nilaiStation1.performance)}">
+                        </ion-icon> 
+                    </div>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+      </ion-row>
+      <ion-row class="row-box">
+          <ion-col col-12 class="col-box">
+            <div>
+              <table class="tabel">
+                <!-- <tr class="tr">
+                  <th class="th1" >Firstname</th>
+                  <th class="th2">Lastname</th> 
+                </tr> -->
+                <tr class="tr">
+                  <td class="td1">Ranking TT</td>
+                  <td class="td2">10</td> 
+                </tr>
+                <tr class="tr">
+                  <td class="td1"> Ranking of Ticket Closed</td>
+                  <td class="td2">4</td> 
+                </tr>
+                <tr class="tr">
+                  <td class="td1"> Ranking of Aging Closed</td>
+                  <td class="td2">15</td> 
+                </tr>
+                <tr class="tr">
+                  <td class="td1"> Ranking Tertinggi</td>
+                  <td class="td2">0</td> 
+                </tr>
+              </table>
+            </div>
+          </ion-col>
+        </ion-row>
+
     </ion-grid>
 </ion-content>
