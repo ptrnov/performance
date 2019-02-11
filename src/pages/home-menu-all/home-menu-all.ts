@@ -13,6 +13,10 @@ export class HomeMenuAllPage {
   dataFilter={"tahun":"","bulan":""};
   dataBoxTT={"tot_tt":0,"tot_open":0,"closed_tt":0,"tot_aging":0};
   dataBoxPM={"tot_pm":0,"open_pm":0,"expired_pm":0,"aging_pm":0};
+
+  public columns_table : any;
+  public rows_table : any;
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
@@ -44,6 +48,25 @@ export class HomeMenuAllPage {
        */
       this.config.set('tahun',data.year);
       this.config.set('bulan',("0" + data.month).slice(-2));
+
+      /**
+       * SET EFAULT TABLE
+       * Create By ptr.nov
+       * Data From Subscribe Login ar Setting page.
+       */
+      this.columns_table=[
+        { name: 'Rengking',prop: 'Rengking', width: 2},
+        { name: 'Station',prop: 'Station', width: 20 },
+        { name: 'PM.Score',prop: 'PM.Score', width: 4 },
+        { name: 'TT.Score',prop: 'TT.Score', width: 4 },
+        { name: 'Achievement',prop: 'Achievement' , width: 5}
+      ];
+  
+      this.rows_table = [
+        {'Rengking':'1','Station':'None','PM.Score':'0','TT.Score':'0','Achievement':''},
+        {'Rengking':'2','Station':'None','PM.Score':'0','TT.Score':'0','Achievement':''},
+        {'Rengking':'3','Station':'None','PM.Score':'0','TT.Score':'0','Achievement':''},
+      ];
     });
   }
 
@@ -75,6 +98,10 @@ export class HomeMenuAllPage {
       this.dataBoxPM.open_pm=rslt.box_pm['tot_pmo'];
       this.dataBoxPM.expired_pm=rslt.box_pm['tot_pme'];
       this.dataBoxPM.aging_pm=80;//rslt.box_pm['aging_pm'];
+      if (rslt.ranking.length>0){
+        this.rows_table=rslt.ranking;
+      }
+      
     }, (err) => {
         console.log("jaringan bermasalah=",err);
     });

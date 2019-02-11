@@ -11,7 +11,7 @@ export class ComparasionPage {
 
   /**
    * Nilai Detail Comparation
-   */
+  */
   nilaiStation1={
     "station":"SCTV Surabaya","performance":2,"tt_Score":1,"pm_Score":2,"rankday":1,"rank_highest":2,
     "tt_close":1222,"tt_fastest":132,"tt_submit":1233,

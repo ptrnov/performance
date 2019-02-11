@@ -43,11 +43,9 @@ export class HomeMenu2Page {
     ];
 
     this.rows_table = [
-      {'Rengking':'1','Station':'JkT SCTV','PM.Score':'1000','TT.Score':'100','Achievement':''},
-      {'Rengking':'2','Station':'Padang Indosiar','PM.Score':'900','TT.Score':'900','Achievement':''},
-      {'Rengking':'3','Station':'Cirebon SCTV','PM.Score':'899','TT.Score':'900','Achievement':''},
-      {'Rengking':'4','Station':'Medan Indosiar','PM.Score':'800','TT.Score':'800','Achievement':''},
-      {'Rengking':'5','Station':'Makasar SCTV','PM.Score':'767','TT.Score':'800','Achievement':''},
+      {'Rengking':'1','Station':'None','PM.Score':'0','TT.Score':'0','Achievement':''},
+      {'Rengking':'2','Station':'None','PM.Score':'0','TT.Score':'0','Achievement':''},
+      {'Rengking':'3','Station':'None','PM.Score':'0','TT.Score':'0','Achievement':''},
     ];
   }
 
@@ -70,6 +68,9 @@ export class HomeMenu2Page {
       this.dataBoxPM.open_pm=rslt.box_pm['tot_pmo'];
       this.dataBoxPM.expired_pm=rslt.box_pm['tot_pme'];
       this.dataBoxPM.aging_pm=40;//rslt.box_pm['aging_pm'];
+      if (rslt.ranking.length>0){
+        this.rows_table=rslt.ranking;
+      }
     }, (err) => {
         console.log("jaringan bermasalah=",err);
     });

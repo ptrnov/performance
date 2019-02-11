@@ -40,7 +40,7 @@ page-station {
       }
     }
   }
-  
+
   .title-Label-button{
     margin-top: 10px;
     border-radius: 10px 10px 10px 10px;
@@ -117,6 +117,7 @@ page-station {
     margin-left: -15px;
     min-width: 109%;
     margin-top: 50px;
+    
     .col-box{
       padding: 0 0 0 0;
       .group-item{
@@ -125,7 +126,9 @@ page-station {
           margin-top: 5px;
           background-color: #3579AE;
           color: #ffffff;
-          border-radius:  5px 5px 5px 5px;
+          border-radius: 17px 71px 17px 17px;
+          // border-radius:  5px 5px 5px 5px;
+         
         }
         .batas2{
           margin-top: 5px;
@@ -188,7 +191,11 @@ page-station {
     }
   } 
 
-  
+  .item-md-primary, .item-divider-md-primary {
+    color: #fff;
+    background-color: #dbae32;
+    border-radius: 17px 17px 17px 17px;
+  }
 
   .tabel{
     margin-top: 2px;

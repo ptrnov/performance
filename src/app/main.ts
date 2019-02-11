@@ -3,6 +3,6 @@ import {enableProdMode} from '@angular/core';
 import { AppModule } from './app.module';
 
 // this is the magic wand
-enableProdMode();
+//enableProdMode();
 
 platformBrowserDynamic().bootstrapModule(AppModule);
